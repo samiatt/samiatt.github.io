@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
     <style>
         /* Global Styles */
-       /* Global Styles */
+ /* Global Styles */
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
     color: #333;
-    background-color: #f8f7f2;
+    background-color: #f0f0f0; /* Soft background */
 }
 
 h1, h2, h5 {
@@ -31,7 +31,7 @@ a {
 
 /* Hero Section */
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-image.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('hero-image.webp');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -41,31 +41,34 @@ a {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-weight: 700;
     margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    color: #d4af37; /* Gold accent */
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 400;
     max-width: 600px;
     margin: 0 auto;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* Navbar */
 .navbar {
-    background-color: #222;
+    background-color: #222; /* Dark background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .navbar-brand {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    letter-spacing: 1px;
+    font-size: 2.4rem;
     font-weight: 700;
+    color: #d4af37;
+    letter-spacing: 2px;
 }
 
 .language-selector {
@@ -73,99 +76,120 @@ a {
     display: flex;
     align-items: center;
     font-size: 1rem;
-    color: #fff;
 }
 
 .language-selector select {
     margin-left: 10px;
-    padding: 6px 12px;
+    padding: 10px 15px;
     border-radius: 5px;
-    border: none;
+    border: 1px solid #d4af37;
     font-size: 1rem;
+    background-color: #fff;
+    color: #333;
+    appearance: none; /* To remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
-.social-buttons {
-    margin-left: 20px;
+.language-selector select::-ms-expand {
+    display: none;
 }
 
+/* Social Buttons */
 .social-buttons a {
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 30px;
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
+    color: #fff;
+    background-color: #d4af37; /* Gold accent */
 }
 
 .social-buttons a:hover {
-    background-color: #d4af37;
+    background-color: #fff;
     color: #343a40;
 }
 
 /* Services Section */
 .services {
-    padding: 60px 20px;
+    padding: 80px 20px;
     background-color: #fff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .services h2 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #333;
     text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
 }
 
+/* Cards in Services */
 .services .card {
     border: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
 }
 
 .services .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .services .card img {
-    height: 220px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
 }
 
 .services .card-body {
-    padding: 20px;
+    padding: 30px;
 }
 
 .services .card-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #333;
     margin-bottom: 15px;
+    text-transform: capitalize;
 }
 
 .services .card-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .services .card-price {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #d4af37;
+    margin-top: 20px;
 }
 
 /* Map Section */
 .map {
-    padding: 60px 20px;
+    padding: 80px 20px;
     background-color: #f0f0f0;
+    text-align: center;
+}
+
+.map h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
 }
 
 /* Footer */
 .footer {
     background-color: #1a1a1a;
     color: #d4af37;
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
@@ -196,22 +220,27 @@ a {
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .services h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .services .card-title {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .social-buttons a {
-        padding: 8px 16px;
-        font-size: 1rem;
+        padding: 10px 20px;
+        font-size: 1.1rem;
+    }
+
+    .map iframe {
+        height: 350px;
     }
 }
+
  
        
     </style>
