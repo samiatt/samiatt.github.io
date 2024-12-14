@@ -1,83 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Experience authentic Turkish bath and spa treatments at Saray Osman in Amman, Jordan">
-    <title>Saray Osman - Luxury Turkish Bath Experience | Amman</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Saray Osman - Turkish Bath</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app" v-cloak>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="img/logo.png" alt="Saray Osman Logo">
-            </div>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Saray Osman</div>
             <div class="nav-links">
-                <a href="index.html" :class="{ active: isHome }">{{ content.nav.home }}</a>
-                <a href="contact.html" :class="{ active: isContact }">{{ content.nav.contact }}</a>
-                <button @click="changeLang('en')" :class="{ active: lang === 'en' }">English</button>
-                <button @click="changeLang('ar')" :class="{ active: lang === 'ar' }">العربية</button>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <button onclick="toggleLanguage('en')">English</button>
+                <button onclick="toggleLanguage('ar')">عربي</button>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <header class="hero">
-            <div class="hero-content">
-                <h1>{{ content.hero.title }}</h1>
-                <p>{{ content.hero.subtitle }}</p>
-                <a href="#book-now" class="cta-button">{{ content.hero.cta }}</a>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Saray Osman</h1>
+            <p>Experience Authentic Turkish Bath in Jordan</p>
+            <a href="#services" class="cta-button">Book Now</a>
+        </div>
+    </header>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="images/service1.jpg" alt="Traditional Bath">
+                <h3>Traditional Bath</h3>
+                <p>Experience authentic Turkish bath ritual</p>
+                <span class="price">35 JOD</span>
             </div>
-        </header>
-
-        <main>
-            <section class="services">
-                <h2>{{ content.services.title }}</h2>
-                <div class="service-grid">
-                    <div v-for="service in content.services.items" :key="service.id" class="service-card">
-                        <img :src="service.image" :alt="service.title">
-                        <h3>{{ service.title }}</h3>
-                        <p>{{ service.description }}</p>
-                        <span class="price">{{ service.price }}</span>
-                    </div>
-                </div>
-            </section>
-
-            <section class="features">
-                <div v-for="feature in content.features" :key="feature.id" class="feature">
-                    <i :class="feature.icon"></i>
-                    <h3>{{ feature.title }}</h3>
-                    <p>{{ feature.description }}</p>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>{{ content.footer.contact }}</h4>
-                    <p><i class="fas fa-phone"></i> +962 6 XXX XXXX</p>
-                    <p><i class="fas fa-envelope"></i> info@sarayosman.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> {{ content.footer.address }}</p>
-                </div>
-                <div class="footer-section">
-                    <h4>{{ content.footer.hours }}</h4>
-                    <p>{{ content.footer.workingHours }}</p>
-                </div>
-                <div class="footer-section social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                </div>
+            <div class="service-card">
+                <img src="images/service2.jpg" alt="Massage">
+                <h3>Massage Therapy</h3>
+                <p>Relaxing massage treatments</p>
+                <span class="price">45 JOD</span>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Saray Osman. {{ content.footer.rights }}</p>
+            <div class="service-card">
+                <img src="images/service3.jpg" alt="Skin Care">
+                <h3>Skin Care</h3>
+                <p>Rejuvenating skin treatments</p>
+                <span class="price">40 JOD</span>
             </div>
-        </footer>
-    </div>
+        </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <script src="js/main.js"></script>
+    <footer>
+        <div class="footer-content">
+            <p>Contact: +962 XXX XXX XXX</p>
+            <p>Address: Amman, Jordan</p>
+            <p>&copy; 2024 Saray Osman</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
