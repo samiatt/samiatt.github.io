@@ -1,49 +1,118 @@
-/* General Styles for RTL and LTR */
-html[lang="ar"] {
-    direction: rtl;
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    text-align: left; /* Default for LTR */
 }
 
-/* RTL specific styles */
-html[lang="ar"] body {
-    text-align: right; /* Right-aligned text in Arabic */
+html {
+    font-size: 16px;
 }
 
-/* Hero Section - Adjusting for RTL */
-#hero .hero-text {
-    text-align: right; /* Right-align content for Arabic */
+/* Hero Section */
+#hero {
+    position: relative;
+    text-align: center;
 }
 
-#hero .cta-btn {
-    margin-left: 0; /* Align button properly in RTL */
-    margin-right: 20px;
+.hero-img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
 
-/* Service Cards */
-.service-card {
-    text-align: left; /* Default left-align for LTR */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    color: white;
 }
 
-html[lang="ar"] .service-card {
-    text-align: right; /* Right-align content in Arabic */
+.cta-btn {
+    background-color: #D4AF37; /* Gold */
+    color: #003366; /* Deep Blue */
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
-/* Ensure the layout adjusts well for both LTR and RTL */
+.cta-btn:hover {
+    background-color: #003366;
+    color: white;
+}
+
+/* Responsive Layout */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
 #services {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-html[lang="ar"] #services {
-    flex-direction: row-reverse; /* Reverse order of service cards in Arabic */
+#services .service-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%;
+    text-align: center;
 }
 
-/* Modify other elements as needed for LTR and RTL */
+/* RTL Specific Styles */
+html[lang="ar"] {
+    direction: rtl;
+}
+
+html[lang="ar"] #services {
+    flex-direction: row-reverse;
+}
+
+html[lang="ar"] body {
+    text-align: right;
+}
+
+html[lang="ar"] .cta-btn {
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+#contact {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+#map iframe {
+    width: 100%;
+    border: 0;
+    height: 400px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #hero .hero-text {
+        padding: 15px;
+    }
+
+    #services {
+        flex-direction: column;
+    }
+}
