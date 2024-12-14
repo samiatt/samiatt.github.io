@@ -1,76 +1,49 @@
-:root {
-    --primary: #1a5f7a;
-    --secondary: #ffc300;
-    --accent: #ff9a3c;
-    --text: #333;
-    --light: #fff;
-    --background: #f4f4f4;
-    --shadow: 0 2px 15px rgba(0,0,0,0.1);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* General Styles for RTL and LTR */
+html[lang="ar"] {
+    direction: rtl;
 }
 
 body {
-    font-family: 'Poppins', 'Cairo', sans-serif;
-    line-height: 1.6;
-    color: var(--text);
-    background-color: var(--background);
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: left; /* Default for LTR */
 }
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
+/* RTL specific styles */
+html[lang="ar"] body {
+    text-align: right; /* Right-aligned text in Arabic */
+}
+
+/* Hero Section - Adjusting for RTL */
+#hero .hero-text {
+    text-align: right; /* Right-align content for Arabic */
+}
+
+#hero .cta-btn {
+    margin-left: 0; /* Align button properly in RTL */
+    margin-right: 20px;
+}
+
+/* Service Cards */
+.service-card {
+    text-align: left; /* Default left-align for LTR */
+}
+
+html[lang="ar"] .service-card {
+    text-align: right; /* Right-align content in Arabic */
+}
+
+/* Ensure the layout adjusts well for both LTR and RTL */
+#services {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--primary);
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.hero {
-    height: 90vh;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--light);
+html[lang="ar"] #services {
+    flex-direction: row-reverse; /* Reverse order of service cards in Arabic */
 }
 
-.service-card {
-    background: var(--light);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-}
-
-.contact-form {
-    background: var(--light);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-}
-
-[dir="rtl"] {
-    font-family: 'Cairo', sans-serif;
-}
-
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-    }
-    
-    .service-grid {
-        grid-template-columns: 1fr;
-    }
-}
+/* Modify other elements as needed for LTR and RTL */
