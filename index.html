@@ -1,64 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saray Osman - Turkish Bath</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Experience luxury and relaxation at Saray Osman, Amman’s premier Turkish bath. Authentic services and tranquil facilities await you.">
+    <meta name="keywords" content="Turkish Bath, Amman, Luxury Spa, Massage, Skin Care, Relaxation">
+    <meta name="author" content="Saray Osman">
+    <title>Saray Osman | Luxury Turkish Bath in Amman</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
+
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">Saray Osman</div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="contact.html">Contact</a>
-                <button onclick="toggleLanguage('en')">English</button>
-                <button onclick="toggleLanguage('ar')">عربي</button>
-            </div>
-        </div>
-    </nav>
+    <!-- Language Toggle -->
+    <div id="lang-toggle">
+        <button onclick="toggleLanguage()">EN | AR</button>
+    </div>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Saray Osman</h1>
-            <p>Experience Authentic Turkish Bath in Jordan</p>
-            <a href="#services" class="cta-button">Book Now</a>
-        </div>
-    </header>
-
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <img src="images/service1.jpg" alt="Traditional Bath">
-                <h3>Traditional Bath</h3>
-                <p>Experience authentic Turkish bath ritual</p>
-                <span class="price">35 JOD</span>
-            </div>
-            <div class="service-card">
-                <img src="images/service2.jpg" alt="Massage">
-                <h3>Massage Therapy</h3>
-                <p>Relaxing massage treatments</p>
-                <span class="price">45 JOD</span>
-            </div>
-            <div class="service-card">
-                <img src="images/service3.jpg" alt="Skin Care">
-                <h3>Skin Care</h3>
-                <p>Rejuvenating skin treatments</p>
-                <span class="price">40 JOD</span>
-            </div>
+    <!-- Hero Section -->
+    <section id="hero">
+        <img src="img/hero-image.jpg" alt="Saray Osman Turkish Bath" class="hero-img">
+        <div class="hero-text">
+            <h1 data-en="Welcome to Saray Osman" data-ar="أهلاً بكم في سراي عثمان">Welcome to Saray Osman</h1>
+            <p data-en="Experience the ultimate luxury and authentic Turkish bath tradition in the heart of Amman." data-ar="اختبروا الفخامة المطلقة وتجربة الحمام التركي التقليدي في قلب عمان.">Experience the ultimate luxury and authentic Turkish bath tradition in the heart of Amman.</p>
+            <a href="#book-now" class="cta-btn" data-en="Book Now" data-ar="احجز الآن">Book Now</a>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <p>Contact: +962 XXX XXX XXX</p>
-            <p>Address: Amman, Jordan</p>
-            <p>&copy; 2024 Saray Osman</p>
-        </div>
-    </footer>
+    <!-- About Us Section -->
+    <section id="about">
+        <h2 data-en="About Us" data-ar="معلومات عنا">About Us</h2>
+        <p data-en="At Saray Osman, we bring you the finest Turkish bath experience with unparalleled luxury. Immerse yourself in a world of tranquility with our traditional baths, soothing massages, and skin-care treatments." 
+        data-ar="في سراي عثمان، نقدم لكم أفضل تجربة للحمام التركي مع رفاهية لا مثيل لها. استمتعوا بعالم من الهدوء مع حماماتنا التقليدية، والمساجات المريحة، وعلاجات العناية بالبشرة.">At Saray Osman, we bring you the finest Turkish bath experience with unparalleled luxury. Immerse yourself in a world of tranquility with our traditional baths, soothing massages, and skin-care treatments.</p>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Services Section -->
+    <section id="services">
+        <h2 data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
+        <div class="service-card">
+            <img src="img/service1.jpg" alt="Traditional Bath">
+            <h3 data-en="Traditional Bath" data-ar="الحمام التقليدي">Traditional Bath</h3>
+            <p data-en="A deeply relaxing and invigorating experience that cleanses and revitalizes your body and mind." data-ar="تجربة مريحة وم revitalizing تعيد تجديد جسمك وعقلك.">A deeply relaxing and invigorating experience that cleanses and revitalizes your body and mind.</p>
+            <p><strong data-en="Price:" data-ar="السعر:">Price:</strong> $50</p>
+        </div>
+        <!-- Add more services as needed... -->
+    </section>
+
+    <!-- Footer or Other Sections -->
+    <!-- Add additional sections for Testimonials, Facilities, etc., in the same way with bilingual data attributes -->
 </body>
+
 </html>
