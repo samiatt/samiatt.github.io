@@ -1,72 +1,94 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Experience luxury and relaxation at Saray Osman, Amman’s premier Turkish bath. Authentic services and tranquil facilities await you.">
     <meta name="keywords" content="Turkish Bath, Amman, Luxury Spa, Massage, Skin Care, Relaxation">
     <meta name="author" content="Saray Osman">
+    <meta property="og:title" content="Saray Osman | Luxury Turkish Bath in Amman">
+    <meta property="og:description" content="Experience the ultimate luxury and authentic Turkish bath tradition in the heart of Amman.">
+    <meta property="og:image" content="img/hero-image.jpg">
+    <meta property="og:url" content="https://sarayosman.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Saray Osman | Luxury Turkish Bath in Amman">
+    <meta name="twitter:description" content="Experience the ultimate luxury and authentic Turkish bath tradition in the heart of Amman.">
+    <meta name="twitter:image" content="img/hero-image.jpg">
+
     <title>Saray Osman | Luxury Turkish Bath in Amman</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Amiri&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="img/hero-image.jpg" as="image">
     <script src="js/script.js" defer></script>
 </head>
-
 <body>
-    <!-- Language Toggle -->
+
+    <!-- Language Toggle Button -->
     <div id="lang-toggle">
         <button onclick="toggleLanguage()">EN | AR</button>
     </div>
 
     <!-- Hero Section -->
     <section id="hero">
-        <img src="img/hero-image.jpg" alt="Saray Osman Turkish Bath" class="hero-img">
+        <img src="img/hero-image.jpg" alt="Saray Osman Turkish Bath" class="hero-img" loading="lazy">
         <div class="hero-text">
             <h1 data-en="Welcome to Saray Osman" data-ar="أهلاً بكم في سراي عثمان">Welcome to Saray Osman</h1>
-            <p data-en="Experience the ultimate luxury and authentic Turkish bath tradition in the heart of Amman." 
-               data-ar="اختبروا الفخامة المطلقة وتجربة الحمام التركي التقليدي في قلب عمان.">
-               Experience the ultimate luxury and authentic Turkish bath tradition in the heart of Amman.</p>
+            <p data-en="Experience the ultimate luxury and authentic Turkish bath tradition in the heart of Amman." data-ar="اختبروا الفخامة المطلقة وتجربة الحمام التركي التقليدي في قلب عمان.">Experience the ultimate luxury and authentic Turkish bath tradition in the heart of Amman.</p>
             <a href="#book-now" class="cta-btn" data-en="Book Now" data-ar="احجز الآن">Book Now</a>
         </div>
     </section>
 
     <!-- About Us Section -->
     <section id="about">
-        <h2 data-en="About Us" data-ar="معلومات عنا">About Us</h2>
-        <p data-en="At Saray Osman, we bring you the finest Turkish bath experience with unparalleled luxury. Immerse yourself in a world of tranquility with our traditional baths, soothing massages, and skin-care treatments." 
-           data-ar="في سراي عثمان، نقدم لكم أفضل تجربة للحمام التركي مع رفاهية لا مثيل لها. استمتعوا بعالم من الهدوء مع حماماتنا التقليدية، والمساجات المريحة، وعلاجات العناية بالبشرة.">
-           At Saray Osman, we bring you the finest Turkish bath experience with unparalleled luxury. Immerse yourself in a world of tranquility with our traditional baths, soothing massages, and skin-care treatments.</p>
+        <h2 data-en="About Us" data-ar="عنّا">About Us</h2>
+        <p data-en="Saray Osman is the epitome of luxury, bringing the authentic Turkish bath experience to Amman." data-ar="سراي عثمان هو رمز للفخامة، حيث نقدم تجربة الحمام التركي الأصيلة في عمان.">Saray Osman is the epitome of luxury, bringing the authentic Turkish bath experience to Amman.</p>
     </section>
 
     <!-- Services Section -->
     <section id="services">
-        <h2 data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
         <div class="service-card">
-            <img src="img/service1.jpg" alt="Traditional Bath">
-            <h3 data-en="Traditional Bath" data-ar="الحمام التقليدي">Traditional Bath</h3>
-            <p data-en="A deeply relaxing and invigorating experience that cleanses and revitalizes your body and mind." 
-               data-ar="تجربة مريحة وم revitalizing تعيد تجديد جسمك وعقلك.">A deeply relaxing and invigorating experience that cleanses and revitalizes your body and mind.</p>
-            <p><strong data-en="Price:" data-ar="السعر:">Price:</strong> $50</p>
+            <img src="img/service1.jpg" alt="Traditional Turkish Bath">
+            <h3 data-en="Traditional Turkish Bath" data-ar="الحمام التركي التقليدي">Traditional Turkish Bath</h3>
+            <p data-en="A soothing and relaxing experience that cleanses the body and mind." data-ar="تجربة مريحة ومريحة تنظف الجسم والعقل.">A soothing and relaxing experience that cleanses the body and mind.</p>
+            <p data-en="From $50" data-ar="ابتداءً من 50 دولارًا">From $50</p>
         </div>
-        <!-- Add other services as needed -->
+        <div class="service-card">
+            <img src="img/service2.jpg" alt="Massage Therapy">
+            <h3 data-en="Massage Therapy" data-ar="العلاج بالتدليك">Massage Therapy</h3>
+            <p data-en="A variety of massage treatments designed to relax and rejuvenate." data-ar="مجموعة متنوعة من علاجات التدليك التي تهدف إلى الاسترخاء والتجديد.">A variety of massage treatments designed to relax and rejuvenate.</p>
+            <p data-en="From $70" data-ar="ابتداءً من 70 دولارًا">From $70</p>
+        </div>
+        <div class="service-card">
+            <img src="img/service3.jpg" alt="Skin Care">
+            <h3 data-en="Skin Care" data-ar="العناية بالبشرة">Skin Care</h3>
+            <p data-en="Nourish and restore your skin with our luxurious treatments." data-ar="غذي واستعيد بشرتك مع علاجاتنا الفاخرة.">Nourish and restore your skin with our luxurious treatments.</p>
+            <p data-en="From $60" data-ar="ابتداءً من 60 دولارًا">From $60</p>
+        </div>
     </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials">
         <h2 data-en="What Our Clients Say" data-ar="ماذا يقول عملاؤنا">What Our Clients Say</h2>
         <div class="testimonial">
-            <p>"The experience was beyond what I expected. Truly relaxing and rejuvenating!" - Amina, Amman</p>
+            <p data-en="The best Turkish bath experience I've ever had! Highly recommended!" data-ar="أفضل تجربة حمام تركي مررت بها! موصى به بشدة!">The best Turkish bath experience I've ever had! Highly recommended!</p>
+            <p>- Sarah, USA</p>
         </div>
         <div class="testimonial">
-            <p>"The best Turkish bath I’ve visited! The service was excellent and the atmosphere was luxurious." - John, USA</p>
+            <p data-en="A truly luxurious and relaxing experience. Worth every penny." data-ar="تجربة فاخرة ومريحة حقًا. تستحق كل قرش.">A truly luxurious and relaxing experience. Worth every penny.</p>
+            <p>- Ahmed, Jordan</p>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section id="book-now">
-        <h2 data-en="Book Your Appointment" data-ar="احجز موعدك">Book Your Appointment</h2>
-        <a href="contact.html" class="cta-btn" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
+    <!-- Google Map Section -->
+    <section id="contact">
+        <h2 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h2>
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.6953427034587!2d35.849902276296625!3d31.887699674048164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca7ab276a44ed%3A0x73c60928f6dfa31a!2z2K3Zhdin2YUg2YLYtdixINi52KvZhdin2YYg2KfZhNiq2LHZg9mK!5e0!3m2!1sen!2sro!4v1734212950348!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <p>Address: Amman, Jordan</p>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=31.887699674048164,35.849902276296625" class="cta-btn" data-en="Get Directions" data-ar="احصل على الاتجاهات">Get Directions</a>
     </section>
-</body>
 
+</body>
 </html>
