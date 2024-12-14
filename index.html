@@ -3,40 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saray Osman - Turkish Bath Experience</title>
+    <meta name="description" content="Experience authentic Turkish bath and spa treatments at Saray Osman in Amman, Jordan">
+    <title>Saray Osman - Luxury Turkish Bath Experience | Amman</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="app">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#home" @click="changeLang('en')">English</a></li>
-                    <li><a href="#home" @click="changeLang('ar')">العربية</a></li>
-                </ul>
-            </nav>
+    <div id="app" v-cloak>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/logo.png" alt="Saray Osman Logo">
+            </div>
+            <div class="nav-links">
+                <a href="index.html" :class="{ active: isHome }">{{ content.nav.home }}</a>
+                <a href="contact.html" :class="{ active: isContact }">{{ content.nav.contact }}</a>
+                <button @click="changeLang('en')" :class="{ active: lang === 'en' }">English</button>
+                <button @click="changeLang('ar')" :class="{ active: lang === 'ar' }">العربية</button>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <div class="hero-content">
+                <h1>{{ content.hero.title }}</h1>
+                <p>{{ content.hero.subtitle }}</p>
+                <a href="#book-now" class="cta-button">{{ content.hero.cta }}</a>
+            </div>
         </header>
 
         <main>
-            <section id="home">
-                <img src="img/turkish-bath.jpg" alt="Saray Osman Turkish Bath">
-                <h1>{{ content.title }}</h1>
+            <section class="services">
+                <h2>{{ content.services.title }}</h2>
+                <div class="service-grid">
+                    <div v-for="service in content.services.items" :key="service.id" class="service-card">
+                        <img :src="service.image" :alt="service.title">
+                        <h3>{{ service.title }}</h3>
+                        <p>{{ service.description }}</p>
+                        <span class="price">{{ service.price }}</span>
+                    </div>
+                </div>
             </section>
 
-            <section id="services">
-                <div v-for="service in content.services" :key="service.id" class="service-row">
-                    <h2>{{ service.title }}</h2>
-                    <p>{{ service.description }}</p>
+            <section class="features">
+                <div v-for="feature in content.features" :key="feature.id" class="feature">
+                    <i :class="feature.icon"></i>
+                    <h3>{{ feature.title }}</h3>
+                    <p>{{ feature.description }}</p>
                 </div>
             </section>
         </main>
 
         <footer>
-            <p>&copy; 2024 Saray Osman. {{ content.rights }}</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>{{ content.footer.contact }}</h4>
+                    <p><i class="fas fa-phone"></i> +962 6 XXX XXXX</p>
+                    <p><i class="fas fa-envelope"></i> info@sarayosman.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> {{ content.footer.address }}</p>
+                </div>
+                <div class="footer-section">
+                    <h4>{{ content.footer.hours }}</h4>
+                    <p>{{ content.footer.workingHours }}</p>
+                </div>
+                <div class="footer-section social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Saray Osman. {{ content.footer.rights }}</p>
+            </div>
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
