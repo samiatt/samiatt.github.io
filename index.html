@@ -1,9 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saray Osman - Turkish Bath Experience</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
 <body>
+    <div id="app">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home" @click="changeLang('en')">English</a></li>
+                    <li><a href="#home" @click="changeLang('ar')">العربية</a></li>
+                </ul>
+            </nav>
+        </header>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+        <main>
+            <section id="home">
+                <img src="img/turkish-bath.jpg" alt="Saray Osman Turkish Bath">
+                <h1>{{ content.title }}</h1>
+            </section>
 
+            <section id="services">
+                <div v-for="service in content.services" :key="service.id" class="service-row">
+                    <h2>{{ service.title }}</h2>
+                    <p>{{ service.description }}</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Saray Osman. {{ content.rights }}</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
