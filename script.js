@@ -1,7 +1,7 @@
 // Set language based on selection and store in a cookie
 function setLanguage(language) {
     document.cookie = "language=" + language + ";path=/;max-age=31536000"; // Set cookie for 1 year
-    loadLanguage(language);  // Load the language and redirect to the correct URL
+    loadLanguage();  // Load the language and redirect to the correct URL
 }
 
 // Load language from cookie (or default to Arabic if no cookie is found)
@@ -19,10 +19,13 @@ function loadLanguage() {
         }
     }
 
-    // Redirect based on the selected language and avoid looping if already at the correct URL
-    if (language === "ar" && !window.location.pathname.startsWith("/en")) {
+    // Check the current URL to avoid a loop
+    const currentUrl = window.location.href;
+
+    // Redirect based on the selected language
+    if (language === "ar" && !currentUrl.startsWith("https://sarayosman.com")) {
         window.location.href = "https://sarayosman.com";  // For Arabic, load the base URL
-    } else if (language === "en" && !window.location.pathname.startsWith("/en")) {
+    } else if (language === "en" && !currentUrl.startsWith("https://sarayosman.com/en")) {
         window.location.href = "https://sarayosman.com/en";  // For English, load the English subdirectory
     }
 }
