@@ -49,16 +49,35 @@ body {
 .language-selector {
     margin-top: 20px;
     text-align: center;
+    width: 150px; /* Set width to ensure consistent size */
+    display: inline-block;
+}
+
+.language-selector select {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 20px;
+    background-color: var(--background-color);
+    border: 1px solid var(--accent-gold);
+    color: var(--text-color);
+    font-size: 0.9rem;
+    outline: none;
 }
 
 /* On Small Screens (Mobile) */
 @media (max-width: 768px) {
+    footer {
+        display: block; /* Make sure footer content stacks on mobile */
+        text-align: center;
+    }
+
     .language-selector {
-        position: fixed;
-        bottom: 10px; /* Bottom-center on mobile */
+        position: relative; /* Inside footer */
+        bottom: auto;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 1000;
+        margin-top: 20px;
     }
 }
 
@@ -69,33 +88,17 @@ body {
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
+        text-align: center; /* Ensure text in footer is centered */
     }
 
     .language-selector {
         margin-top: 20px;
         position: relative; /* Footer positioning */
-        bottom: auto;
         transform: none;
+        bottom: auto;
     }
 }
 
-
-/* On Larger Screens (Desktops) */
-@media (min-width: 769px) {
-    footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .language-selector {
-        margin-top: 20px;
-        position: relative; /* Footer positioning */
-        bottom: auto;
-        transform: none;
-    }
-}
 
 /* Hero Section */
 .hero {
