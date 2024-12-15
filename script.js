@@ -8,8 +8,6 @@ function setLanguage(lang) {
 document.addEventListener('DOMContentLoaded', () => {
     const lang = getCookie('lang');
     if (lang) {
-        // You could set the language here based on the value in `lang` cookie
-        // E.g., update text on the page to match selected language
         console.log(`Language selected: ${lang}`);
     }
 });
