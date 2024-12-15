@@ -1,53 +1,45 @@
-// Function to handle language change
+// Function to set the language based on the user's selection
 function changeLanguage() {
-    const lang = document.getElementById('language-select').value;
-    document.documentElement.lang = lang;
-    setLanguageCookie(lang);
-
-    // Change text based on language
-    updateText(lang);
+    var lang = document.getElementById("language-select").value;
+    setLanguage(lang);
 }
 
-// Function to set language cookie
-function setLanguageCookie(language) {
-    document.cookie = `language=${language}; path=/; max-age=31536000`; // 1 year
-}
-
-// Function to update text content based on language
-function updateText(language) {
-    const translations = {
-        en: {
-            "brand-name": "Turkish Bath",
-            "hero-title": "Welcome to the Turkish Bath",
-            "hero-description": "Experience ultimate relaxation in our luxurious and traditional setting.",
-            "services-title": "Our Services",
-            "contact-title": "Contact Us",
-            "contact-description": "Visit us at: 123 Turkish Bath Street, Istanbul, Turkey",
-            "footer-text": "&copy; 2024 Turkish Bath. All Rights Reserved."
-        },
-        ar: {
-            "brand-name": "حمام تركي",
-            "hero-title": "مرحبًا بكم في الحمام التركي",
-            "hero-description": "اختبر الاسترخاء التام في بيئتنا الفاخرة والتقليدية.",
-            "services-title": "خدماتنا",
-            "contact-title": "اتصل بنا",
-            "contact-description": "زورونا في: شارع الحمام التركي 123، إسطنبول، تركيا",
-            "footer-text": "&copy; 2024 الحمام التركي. جميع الحقوق محفوظة."
-        }
-    };
-
-    const trans = translations[language];
-    for (const key in trans) {
-        document.getElementById(key).innerText = trans[key];
+// Function to set the language and update text content
+function setLanguage(lang) {
+    // Update the language selection in the cookie
+    document.cookie = "language=" + lang + "; path=/; max-age=31536000"; // 1 year expiration
+    
+    // Update the page content based on selected language
+    if (lang === "en") {
+        document.getElementById("hero-title").textContent = "Welcome to the Turkish Bath";
+        document.getElementById("hero-description").textContent = "Experience ultimate relaxation in our luxurious and traditional setting.";
+        document.getElementById("services-title").textContent = "Our Services";
+        document.getElementById("contact-title").textContent = "Contact Us";
+        document.getElementById("footer-text").textContent = "© 2024 Turkish Bath. All Rights Reserved.";
+    } else if (lang === "ar") {
+        document.getElementById("hero-title").textContent = "حمام تركي";
+        document.getElementById("hero-description").textContent = "اختبر الاسترخاء التام في أجوائنا الفاخرة والتقليدية.";
+        document.getElementById("services-title").textContent = "خدماتنا";
+        document.getElementById("contact-title").textContent = "اتصل بنا";
+        document.getElementById("footer-text").textContent = "© 2024 الحمام التركي. جميع الحقوق محفوظة.";
     }
 }
 
-// On page load, set the language based on the cookie or default to English
-window.onload = function() {
-    const langCookie = document.cookie.match(/language=([^;]+)/);
-    const language = langCookie ? langCookie[1] : 'en';
-    document.documentElement.lang = language;
-    document.getElementById('language-select').value = language;
+// Check if a language preference is stored in cookies
+function checkLanguagePreference() {
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.startsWith("language=")) {
+            var lang = cookie.split('=')[1];
+            setLanguage(lang);
+            document.getElementById("language-select").value = lang; // Update the selector
+            break;
+        }
+    }
+}
 
-    updateText(language);
+// Run the language check on page load
+window.onload = function() {
+    checkLanguagePreference();
 };
