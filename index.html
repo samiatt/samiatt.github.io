@@ -1,346 +1,80 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Experience authentic Turkish bath luxury at Saray Osman in Amman. Traditional hammam services, massages, and steam rooms in a luxurious setting.">
-    <meta name="keywords" content="Turkish Bath, Hammam, Amman, Luxury Spa, Massage, Steam Room, حمام تركي، حمام عثماني، عمان، سبا فاخر، مساج">
-    <meta name="author" content="Saray Osman Turkish Bath">
-    <title>Saray Osman Turkish Bath | حمام قصر عثمان التركي</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cairo:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-
-        :root {
-            --background-color: #F9F9F9;  /* Soft, light background */
-            --text-color: #333333;        /* Darker text for better contrast */
-            --interactive-color: #B08D57; /* Muted gold accent */
-            --accent-pink: #F1C6C6;       /* Subtle soft pink */
-            --accent-gold: #D0A97E;       /* Elegant gold */
-            --shadow-color: rgba(0, 0, 0, 0.1);
-        }
-
-        /* Base Layout */
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            font-family: 'Playfair Display', 'Cairo', serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        /* Navigation Bar */
-        .navbar {
-            height: 80px;
-            padding: 0 5%;
-            background-color: #FFFFFF;
-            box-shadow: 0 4px 15px var(--shadow-color);
-        }
-
-        .navbar-brand {
-            font-size: 2.2rem;
-            color: var(--accent-gold);
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .nav-controls {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        /* Language Selector */
-        .language-selector select {
-            width: 120px;
-            height: 35px;
-            padding: 0 15px;
-            border-radius: 20px;
-            border: 1px solid var(--accent-gold);
-            background-color: var(--background-color);
-            color: var(--text-color);
-            font-size: 0.9rem;
-        }
-
-        /* Social Buttons */
-        .social-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-buttons a {
-            padding: 10px 20px;
-            border-radius: 25px;
-            background-color: var(--accent-gold);
-            color: #fff;
-            transition: all 0.3s ease;
-        }
-
-        .social-buttons a:hover {
-            background-color: var(--accent-pink);
-            transform: translateY(-3px);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
-                url('luxury-hammam.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 10% 10%;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            font-weight: bold;
-            color: var(--text-color);
-            margin-bottom: 2rem;
-        }
-
-        .hero p {
-            font-size: 1.6rem;
-            color: var(--text-color);
-            margin-bottom: 3rem;
-        }
-
-        .hero a {
-            padding: 10px 30px;
-            background-color: var(--accent-gold);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-        }
-
-        .hero a:hover {
-            background-color: var(--accent-pink);
-            transform: translateY(-3px);
-        }
-
-        /* Services Section */
-        .services {
-            padding: 7rem 10%;
-            background-color: var(--background-color);
-        }
-
-        .services h2 {
-            font-size: 3.5rem;
-            text-align: center;
-            margin-bottom: 4rem;
-            color: var(--accent-gold);
-        }
-
-        .service-card {
-            box-shadow: 0 10px 25px var(--shadow-color);
-            border: none;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-card img {
-            height: 250px;
-            object-fit: cover;
-            border-radius: 15px 15px 0 0;
-        }
-
-        .service-card .card-body {
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .service-card .card-title {
-            font-size: 2rem;
-            color: var(--text-color);
-            margin-bottom: 1rem;
-        }
-
-        .price-tag {
-            position: absolute;
-            bottom: 1rem;
-            right: 1rem;
-            padding: 0.8rem 1.5rem;
-            background-color: var(--accent-gold);
-            color: #fff;
-            font-weight: 700;
-            border-radius: 25px;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 6rem 10%;
-            background-color: var(--background-color);
-        }
-
-        .contact-info {
-            background-color: var(--background-color);
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px var(--shadow-color);
-            border-radius: 15px;
-        }
-
-        .contact-info h5 {
-            font-size: 2rem;
-            color: var(--accent-gold);
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-info p {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .map-container {
-            height: 400px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px var(--shadow-color);
-        }
-
-        /* Footer */
-        footer {
-            padding: 2rem 10%;
-            background-color: var(--background-color);
-            border-top: 1px solid var(--shadow-color);
-            text-align: center;
-        }
-
-        footer p {
-            font-size: 1.1rem;
-            color: var(--text-color);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-
-            .hero p {
-                font-size: 1.4rem;
-            }
-
-            .services {
-                padding: 6rem 5%;
-            }
-
-            .contact-section {
-                padding: 5rem 5%;
-            }
-
-            .map-container iframe {
-                height: 100%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .service-card {
-                height: auto;
-            }
-
-            .contact-info,
-            .map-container {
-                margin-bottom: 2rem;
-            }
-
-            .map-container {
-                height: 250px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .social-buttons {
-                flex-direction: column;
-            }
-
-            .social-buttons a {
-                width: 100%;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Turkish Bath</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Saray Osman</a>
-            <div class="d-flex align-items-center">
-                <div class="language-selector me-3">
-                    <select>
-                        <option value="en">English</option>
-                        <option value="ar">العربية</option>
-                    </select>
-                </div>
-                <div class="social-buttons">
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
+    <header>
+        <div class="hero">
+            <img src="hero-image.jpg" alt="Turkish Bath" />
+            <div class="hero-overlay">
+                <div class="language-selector">
+                    <button onclick="setLanguage('en')">EN</button>
+                    <button onclick="setLanguage('ar')">AR</button>
                 </div>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <section class="hero">
-        <div>
-            <h1>Welcome to Saray Osman Turkish Bath</h1>
-            <p>Relax, rejuvenate, and experience the luxury of a traditional Turkish Hammam in the heart of Amman.</p>
-            <a href="#services">Explore Our Services</a>
-        </div>
-    </section>
-
-    <section class="services" id="services">
+    <section id="services">
         <h2>Our Services</h2>
-        <div class="row">
-            <!-- Example Service Card -->
-            <div class="col-md-4">
-                <div class="card service-card">
-                    <img src="service1.jpg" alt="Traditional Hammam">
-                    <div class="card-body">
-                        <h5 class="card-title">Traditional Hammam</h5>
-                        <p class="card-text">Indulge in a luxurious Turkish bath experience that will leave you refreshed.</p>
-                    </div>
-                    <span class="price-tag">$50</span>
-                </div>
+        <div class="service-row">
+            <div class="service">
+                <h3>Relaxing Massage</h3>
+                <p>A soothing full-body massage to release tension.</p>
+                <p><span class="tag">Time: 60 min</span> | <span class="tag">Price: $50</span></p>
+            </div>
+            <div class="service">
+                <h3>Facial Treatment</h3>
+                <p>Revitalize your skin with a deep cleansing facial.</p>
+                <p><span class="tag">Time: 45 min</span> | <span class="tag">Price: $40</span></p>
+            </div>
+            <div class="service">
+                <h3>Traditional Hammam</h3>
+                <p>Experience the ancient Turkish bath ritual.</p>
+                <p><span class="tag">Time: 90 min</span> | <span class="tag">Price: $80</span></p>
+            </div>
+            <div class="service">
+                <h3>Foot Scrub</h3>
+                <p>A refreshing exfoliation for your feet.</p>
+                <p><span class="tag">Time: 30 min</span> | <span class="tag">Price: $30</span></p>
             </div>
         </div>
     </section>
 
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="row g-4">
-                <!-- Contact Info -->
-                <div class="col-md-6">
-                    <div class="contact-info">
-                        <h5>Visit Us</h5>
-                        <p><i class="fas fa-map-marker-alt me-2"></i>Al-Madina Al-Munawara Street, Amman, Jordan</p>
-                        <p><i class="fas fa-phone me-2"></i><a href="tel:+962793020130">+962 79 302 0130</a></p>
-                        <p><i class="fas fa-clock me-2"></i>Open daily: 10:00 AM - 10:00 PM</p>
-                    </div>
-                </div>
-                <!-- Map -->
-                <div class="col-md-6">
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
+    <section id="location">
+        <h2>Find Us</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_IFRAME_LINK" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <p>Working Hours: Monday to Sunday, 10 AM - 8 PM</p>
+        <p>Email: info@turkishbath.com</p>
+        <p>Phone: +123 456 7890</p>
+    </section>
+
+    <section id="offers" class="banner" style="display: none;">
+        <p>Special Offer: 10% off on all services!</p>
     </section>
 
     <footer>
-        <p>&copy; 2024 Saray Osman Turkish Bath | All Rights Reserved</p>
+        <p>&copy; 2024 Turkish Bath</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
