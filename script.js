@@ -23,12 +23,3 @@ function getCookie(name) {
     }
     return null;
 }
-
-// Toggle banner visibility based on a condition
-function toggleBanner() {
-    const banner = document.getElementById('offers');
-    banner.style.display = banner.style.display === 'none' ? 'block' : 'none';
-}
-
-// Example: show banner after 5 seconds
-setTimeout(toggleBanner, 5000);
