@@ -11,10 +11,10 @@
 
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="navbar-brand">Turkish Bath</div>
+        <div class="navbar-brand" id="brand-name">Turkish Bath</div>
         <div class="nav-controls">
             <div class="language-selector">
-                <select onchange="setLanguage(this.value)">
+                <select id="language-select" onchange="setLanguage(this.value)">
                     <option value="en">English</option>
                     <option value="ar">Arabic</option>
                 </select>
@@ -25,21 +25,21 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Welcome to the Turkish Bath</h1>
-            <p>Experience ultimate relaxation in our luxurious and traditional setting.</p>
+            <h1 id="hero-title">Welcome to the Turkish Bath</h1>
+            <p id="hero-description">Experience ultimate relaxation in our luxurious and traditional setting.</p>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="services">
-        <h2>Our Services</h2>
+        <h2 id="services-title">Our Services</h2>
         <div class="service-cards">
             <!-- Service 1 -->
             <div class="service-card">
                 <img src="service1.jpg" alt="Traditional Hammam">
                 <div class="card-body">
-                    <h3 class="card-title">Traditional Hammam</h3>
-                    <p>A deep cleansing treatment for your skin.</p>
+                    <h3 class="card-title" id="service1-title">Traditional Hammam</h3>
+                    <p id="service1-description">A deep cleansing treatment for your skin.</p>
                     <div class="price-tag">$50</div>
                 </div>
             </div>
@@ -47,8 +47,8 @@
             <div class="service-card">
                 <img src="service2.jpg" alt="Massage Therapy">
                 <div class="card-body">
-                    <h3 class="card-title">Massage Therapy</h3>
-                    <p>Relax with a full-body massage.</p>
+                    <h3 class="card-title" id="service2-title">Massage Therapy</h3>
+                    <p id="service2-description">Relax with a full-body massage.</p>
                     <div class="price-tag">$70</div>
                 </div>
             </div>
@@ -56,8 +56,8 @@
             <div class="service-card">
                 <img src="service3.jpg" alt="Facial Treatment">
                 <div class="card-body">
-                    <h3 class="card-title">Facial Treatment</h3>
-                    <p>Rejuvenate your face with our hydrating treatments.</p>
+                    <h3 class="card-title" id="service3-title">Facial Treatment</h3>
+                    <p id="service3-description">Rejuvenate your face with our hydrating treatments.</p>
                     <div class="price-tag">$40</div>
                 </div>
             </div>
@@ -65,8 +65,8 @@
             <div class="service-card">
                 <img src="service4.jpg" alt="Aromatherapy">
                 <div class="card-body">
-                    <h3 class="card-title">Aromatherapy</h3>
-                    <p>Revitalize your senses with essential oils.</p>
+                    <h3 class="card-title" id="service4-title">Aromatherapy</h3>
+                    <p id="service4-description">Revitalize your senses with essential oils.</p>
                     <div class="price-tag">$60</div>
                 </div>
             </div>
@@ -74,8 +74,8 @@
             <div class="service-card">
                 <img src="service5.jpg" alt="Scrub & Exfoliation">
                 <div class="card-body">
-                    <h3 class="card-title">Scrub & Exfoliation</h3>
-                    <p>Exfoliate and remove dead skin cells.</p>
+                    <h3 class="card-title" id="service5-title">Scrub & Exfoliation</h3>
+                    <p id="service5-description">Exfoliate and remove dead skin cells.</p>
                     <div class="price-tag">$30</div>
                 </div>
             </div>
@@ -83,8 +83,8 @@
             <div class="service-card">
                 <img src="service6.jpg" alt="Foot Reflexology">
                 <div class="card-body">
-                    <h3 class="card-title">Foot Reflexology</h3>
-                    <p>Relax your feet with a soothing massage.</p>
+                    <h3 class="card-title" id="service6-title">Foot Reflexology</h3>
+                    <p id="service6-description">Relax your feet with a soothing massage.</p>
                     <div class="price-tag">$25</div>
                 </div>
             </div>
@@ -94,9 +94,9 @@
     <!-- Contact Section -->
     <section class="contact-section">
         <div class="contact-info">
-            <h5>Contact Us</h5>
-            <p>Visit us at: 123 Turkish Bath Street, Istanbul, Turkey</p>
-            <p>Call: +90 123 456 7890</p>
+            <h5 id="contact-title">Contact Us</h5>
+            <p id="contact-description">Visit us at: 123 Turkish Bath Street, Istanbul, Turkey</p>
+            <p id="contact-phone">Call: +90 123 456 7890</p>
             <div class="map-container">
                 <iframe src="https://maps.google.com/maps?q=Istanbul+Turkey&output=embed" frameborder="0"></iframe>
             </div>
@@ -105,7 +105,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Turkish Bath. All Rights Reserved.</p>
+        <p id="footer-text">&copy; 2024 Turkish Bath. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
