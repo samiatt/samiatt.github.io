@@ -4,11 +4,11 @@ function setLanguage(language) {
     loadLanguage(language);
 }
 
-// Load language from cookie (or default to English)
+// Load language from cookie (or default to Arabic)
 function loadLanguage(language) {
     if (!language) {
         const cookieLanguage = document.cookie.match(/language=([^;]+)/);
-        language = cookieLanguage ? cookieLanguage[1] : 'en';
+        language = cookieLanguage ? cookieLanguage[1] : 'ar';
     }
 
     // Translations for various sections of the page
