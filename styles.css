@@ -177,22 +177,17 @@ body {
 /* General Social Media Button Styles */
 .social-buttons a,
 .footer-social-buttons a {
-    font-size: 2.5rem; /* Increase the icon size to make them bigger */
+    font-size: 3rem; /* Increase icon size */
     margin: 0 15px;
-    padding: 10px; /* Add some padding around the icons */
+    padding: 10px; /* Add padding */
     text-decoration: none;
     display: inline-block;
-}
-
-.social-buttons a:hover,
-.footer-social-buttons a:hover {
-    opacity: 0.8; /* Add a subtle effect when hovering */
 }
 
 /* Specific to Navbar */
 .social-buttons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
 }
 
@@ -204,14 +199,36 @@ body {
 }
 
 .footer-social-icon {
-    font-size: 3rem; /* Even larger in footer */
+    font-size: 3rem; /* Larger icon in footer */
     margin: 0 20px;
     padding: 10px;
     text-decoration: none;
 }
 
 .footer-social-icon:hover {
-    opacity: 0.8; /* Add hover effect in footer as well */
+    opacity: 0.8; /* Hover effect in footer */
+}
+
+/* Icon Colors for Specific Social Media Platforms */
+.social-buttons .fab.fa-facebook,
+.footer-social-buttons .fab.fa-facebook {
+    color: #1877f2; /* Facebook Blue */
+}
+
+.social-buttons .fab.fa-whatsapp,
+.footer-social-buttons .fab.fa-whatsapp {
+    color: #25d366; /* WhatsApp Green */
+}
+
+.social-buttons .fab.fa-instagram,
+.footer-social-buttons .fab.fa-instagram {
+    color: #e1306c; /* Instagram Pinkish */
+}
+
+/* Hover Effects */
+.social-buttons a:hover,
+.footer-social-buttons a:hover {
+    opacity: 0.8;
 }
 
 /* Footer */
