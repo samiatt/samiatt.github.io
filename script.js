@@ -20,15 +20,15 @@ function loadLanguage() {
     const baseUrl = "https://sarayosman.com";
     const englishUrl = baseUrl + "/en";
 
-    // Check and redirect based on the language
+    // Handle redirection based on language
     if (language === "ar") {
-        if (!currentUrl.startsWith(baseUrl)) {
-            // Redirect to Arabic if the user is not already on the Arabic site
+        if (currentUrl.startsWith(englishUrl)) {
+            // If the user is on the English version, redirect to the Arabic version
             window.location.href = baseUrl;
         }
     } else if (language === "en") {
-        if (!currentUrl.startsWith(englishUrl)) {
-            // Redirect to English if the user is not already on the English site
+        if (currentUrl.startsWith(baseUrl) && !currentUrl.startsWith(englishUrl)) {
+            // If the user is on the Arabic version, redirect to the English version
             window.location.href = englishUrl;
         }
     }
