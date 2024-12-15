@@ -43,15 +43,32 @@ body {
     align-items: center;
 }
 
+/* Existing Styles */
+
+/* Language Selector */
+.language-selector {
+    margin-top: 20px;
+    text-align: center;
+}
+
 .language-selector select {
-    width: 120px;
+    width: 150px;
     height: 40px;
-    padding: 0 15px;
+    padding: 0 10px;
     border-radius: 20px;
     background-color: var(--background-color);
     border: 1px solid var(--accent-gold);
     color: var(--text-color);
     font-size: 0.9rem;
+    outline: none;
+}
+
+@media (min-width: 769px) {
+    .language-selector {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+    }
 }
 
 /* Hero Section */
