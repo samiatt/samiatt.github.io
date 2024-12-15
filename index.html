@@ -12,256 +12,296 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
 
-:root {
-    --background-color: #FFFFFF;
-    --text-color: #000000;
-    --interactive-color: #D2B48C;
-    --accent-pink: #FFB6C1;
-    --accent-gold: #DAA520;
-    --shadow-color: rgba(0, 0, 0, 0.08);
-}
+        :root {
+            --background-color: #FFFFFF;  /* Crisp marble white */
+            --text-color: #000000;        /* Rich black */
+            --interactive-color: #D2B48C; /* Creamy tan */
+            --accent-pink: #FFB6C1;       /* Soft pink */
+            --accent-gold: #DAA520;       /* Antique gold */
+            --shadow-color: rgba(0, 0, 0, 0.08);
+        }
 
-/* Base Layout */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'Playfair Display', 'Cairo', serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
+        /* Base Layout */
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Playfair Display', 'Cairo', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
 
-/* Navigation Bar */
-.navbar {
-    height: 80px;
-    padding: 0.5rem 5%;
-    background-color: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 15px var(--shadow-color);
-}
+        /* Navigation Bar */
+        .navbar {
+            height: 80px;
+            padding: 0.5rem 5%;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 15px var(--shadow-color);
+        }
 
-.navbar-brand {
-    font-size: 2.2rem;
-    letter-spacing: 1px;
-    color: var(--accent-gold) !important;
-    margin-right: 3rem;
-}
+        .navbar-brand {
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            color: var(--accent-gold) !important;
+            margin-right: 3rem;
+        }
 
-.nav-controls {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
+        .nav-controls {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
 
-/* Language Selector */
-.language-selector select {
-    width: 120px;
-    height: 40px;
-    padding: 0 15px;
-    border-radius: 20px;
-    background-color: var(--background-color);
-    border: 1px solid var(--accent-gold);
-    color: var(--text-color);
-    font-size: 0.9rem;
-}
+        /* Language Selector */
+        .language-selector select {
+            width: 120px;
+            height: 40px;
+            padding: 0 15px;
+            border-radius: 20px;
+            background-color: var(--background-color);
+            border: 1px solid var(--accent-gold);
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
 
-/* Social Buttons */
-.social-buttons {
-    display: flex;
-    gap: 1rem;
-}
+        /* Social Buttons */
+        .social-buttons {
+            display: flex;
+            gap: 1rem;
+        }
 
-.social-buttons a {
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    background-color: var(--accent-gold);
-    color: var(--background-color);
-    transition: all 0.3s ease;
-}
+        .social-buttons a {
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            background-color: var(--accent-gold);
+            color: var(--background-color);
+            transition: all 0.3s ease;
+        }
 
-.social-buttons a:hover {
-    background-color: var(--accent-pink);
-    transform: translateY(-2px);
-}
+        .social-buttons a:hover {
+            background-color: var(--accent-pink);
+            transform: translateY(-2px);
+        }
 
-/* Hero Section */
-.hero {
-    height: calc(100vh - 80px);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
-        url('luxury-hammam.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 0 10%;
-}
+        /* Hero Section */
+        .hero {
+            height: calc(100vh - 80px);
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                url('luxury-hammam.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 0 10%;
+        }
 
-.hero-content {
-    max-width: 800px;
-    padding-top: 15vh;
-}
+        .hero-content {
+            max-width: 800px;
+            padding-top: 15vh;
+        }
 
-.hero-content h1 {
-    font-size: 4.5rem;
-    line-height: 1.2;
-    margin-bottom: 2rem;
-    color: var(--text-color);
-}
+        .hero-content h1 {
+            font-size: 4.5rem;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
 
-.hero-content p {
-    font-size: 1.8rem;
-    color: var(--text-color);
-    margin-bottom: 3rem;
-}
+        .hero-content p {
+            font-size: 1.8rem;
+            color: var(--text-color);
+            margin-bottom: 3rem;
+        }
 
-/* Services Section */
-.services {
-    padding: 8rem 10%;
-    background-color: var(--background-color);
-}
+        /* Services Section */
+        .services {
+            padding: 8rem 10%;
+            background-color: var(--background-color);
+        }
 
-.services h2 {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 4rem;
-    color: var(--accent-gold);
-}
+        .services h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: var(--accent-gold);
+        }
 
-.service-card {
-    height: 450px;
-    margin-bottom: 2rem;
-    background-color: var(--background-color);
-    border: none;
-    box-shadow: 0 10px 30px var(--shadow-color);
-    transition: transform 0.3s ease;
-}
+        .service-card {
+            height: 450px;
+            margin-bottom: 2rem;
+            background-color: var(--background-color);
+            border: none;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            transition: transform 0.3s ease;
+        }
 
-.service-card:hover {
-    transform: translateY(-10px);
-}
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
 
-.service-card img {
-    height: 250px;
-    object-fit: cover;
-}
+        .service-card img {
+            height: 250px;
+            object-fit: cover;
+        }
 
-.service-card .card-body {
-    padding: 2rem;
-}
+        .service-card .card-body {
+            padding: 2rem;
+        }
 
-.service-card .card-title {
-    font-size: 1.8rem;
-    color: var(--text-color);
-    margin-bottom: 1rem;
-}
+        .service-card .card-title {
+            font-size: 1.8rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
 
-.price-tag {
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-    padding: 0.8rem 1.5rem;
-    background-color: var(--accent-gold);
-    color: var(--background-color);
-    border-radius: 25px;
-    font-weight: 500;
-}
+        .price-tag {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--accent-gold);
+            color: var(--background-color);
+            border-radius: 25px;
+            font-weight: 500;
+        }
 
-/* Contact Section */
-.contact-section {
-    padding: 6rem 10%;
-    background-color: var(--background-color);
-}
+        /* Contact Section */
+        .contact-section {
+            padding: 6rem 10%;
+            background-color: var(--background-color);
+        }
 
-.contact-info {
-    padding: 3rem;
-    background-color: var(--background-color);
-    border-radius: 15px;
-    box-shadow: 0 10px 30px var(--shadow-color);
-}
+        .contact-info {
+            padding: 3rem;
+            background-color: var(--background-color);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+        }
 
-.contact-info h5 {
-    font-size: 2rem;
-    color: var(--accent-gold);
-    margin-bottom: 2rem;
-}
+        .contact-info h5 {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 2rem;
+        }
 
-.contact-info p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
+        .contact-info p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
 
-.map-container {
-    height: 400px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px var(--shadow-color);
-}
+        .map-container {
+            height: 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow-color);
+        }
 
-/* Footer */
-footer {
-    padding: 2rem 10%;
-    background-color: var(--background-color);
-    border-top: 1px solid var(--shadow-color);
-    text-align: center;
-}
+        /* Footer */
+        footer {
+            padding: 2rem 10%;
+            background-color: var(--background-color);
+            border-top: 1px solid var(--shadow-color);
+            text-align: center;
+        }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-    .navbar {
-        padding: 1rem 5%;
-        height: auto;
-    }
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .navbar {
+                padding: 1rem 5%;
+                height: auto;
+            }
 
-    .hero-content h1 {
-        font-size: 3.5rem;
-    }
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
 
-    .hero-content p {
-        font-size: 1.5rem;
-    }
+            .hero-content p {
+                font-size: 1.5rem;
+            }
 
-    .services {
-        padding: 6rem 5%;
-    }
+            .services {
+                padding: 6rem 5%;
+            }
 
-    .contact-section {
-        padding: 4rem 5%;
-    }
-}
+            .contact-section {
+                padding: 4rem 5%;
+            }
+        }
 
-@media (max-width: 768px) {
-    .nav-controls {
-        flex-direction: column;
-        gap: 1rem;
-    }
+        @media (max-width: 768px) {
+            .nav-controls {
+                flex-direction: column;
+                gap: 1rem;
+            }
 
-    .hero-content h1 {
-        font-size: 2.8rem;
-    }
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
 
-    .service-card {
-        height: auto;
-    }
+            .service-card {
+                height: auto;
+            }
 
-    .contact-info {
-        margin-bottom: 2rem;
-    }
-}
+            .contact-info {
+                margin-bottom: 2rem;
+            }
+        }
 
-@media (max-width: 576px) {
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
+        @media (max-width: 576px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
 
-    .social-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
+            .social-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
 
-    .social-buttons a {
-        width: 100%;
-        text-align: center;
-    }
-}
-        
+            .social-buttons a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Contact Section Adjustments */
+        .contact-section .row {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .contact-info,
+        .map-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .contact-info {
+            background-color: var(--background-color);
+            padding: 3rem;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            border-radius: 15px;
+        }
+
+        .map-container {
+            height: 100%;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+            .contact-info,
+            .map-container {
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -269,64 +309,40 @@ footer {
         <div class="container">
             <a class="navbar-brand" href="#" data-translate="brand">Saray Osman</a>
             <div class="d-flex align-items-center">
-                <div class="language-selector">
-                    <select id="language" class="form-select">
+                <div class="language-selector me-3">
+                    <select>
                         <option value="en">English</option>
                         <option value="ar">العربية</option>
                     </select>
                 </div>
                 <div class="social-buttons">
-                    <a href="https://www.facebook.com/profile.php?id=100092412745097" target="_blank" class="btn">
-                        <i class="fab fa-facebook"></i> Facebook
-                    </a>
-                    <a href="https://wa.me/+962793020130" target="_blank" class="btn">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="hero-content">
-            <h1 data-translate="hero-title">Welcome to Saray Osman Turkish Bath</h1>
-            <p class="lead mb-4" data-translate="hero-description">Experience authentic relaxation and rejuvenation in the heart of Amman</p>
+            <h1>Welcome to Saray Osman Turkish Bath</h1>
+            <p>Experience luxury and relaxation with our traditional Turkish Hammam services in the heart of Amman.</p>
+            <a href="#services" class="btn btn-outline-dark btn-lg">Explore Our Services</a>
         </div>
     </section>
 
     <section class="services" id="services">
-        <div class="container">
-            <h2 class="text-center mb-5" data-translate="services-title">Our Services</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="service-card card">
-                        <img src="service1.webp" class="card-img-top" alt="Traditional Hammam">
-                        <div class="card-body">
-                            <h5 class="card-title" data-translate="service1-title">Traditional Hammam</h5>
-                            <p class="card-text" data-translate="service1-description">Immerse yourself in the centuries-old tradition of Turkish bathing. Our hammam experience includes traditional soap massage, exfoliation, and steam room access.</p>
-                            <div class="price-tag" data-translate="service1-price">20 JOD</div>
-                        </div>
+        <h2 data-translate="services-title">Our Services</h2>
+        <div class="row">
+            <!-- Example Service Card -->
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <img src="service1.jpg" alt="Hammam Service">
+                    <div class="card-body">
+                        <h5 class="card-title">Traditional Hammam</h5>
+                        <p class="card-text">Relax and rejuvenate with a classic Turkish bath experience.</p>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card card">
-                        <img src="service2.webp" class="card-img-top" alt="Aromatherapy Massage">
-                        <div class="card-body">
-                            <h5 class="card-title" data-translate="service2-title">Aromatherapy Massage</h5>
-                            <p class="card-text" data-translate="service2-description">Experience deep relaxation with our signature aromatherapy massage using premium essential oils and expert techniques.</p>
-                            <div class="price-tag" data-translate="service2-price">25 JOD</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card card">
-                        <img src="service3.webp" class="card-img-top" alt="Steam Room">
-                        <div class="card-body">
-                            <h5 class="card-title" data-translate="service3-title">Steam Room</h5>
-                            <p class="card-text" data-translate="service3-description">Detoxify and rejuvenate in our state-of-the-art steam rooms. Perfect for improving circulation and skin health.</p>
-                            <div class="price-tag" data-translate="service3-price">15 JOD</div>
-                        </div>
-                    </div>
+                    <span class="price-tag">$50</span>
                 </div>
             </div>
         </div>
@@ -336,6 +352,7 @@ footer {
         <div class="container">
             <h2 class="text-center mb-5" data-translate="contact-title">Contact Us</h2>
             <div class="row g-4">
+                <!-- Contact Info -->
                 <div class="col-md-6">
                     <div class="contact-info">
                         <h5 data-translate="contact-info-title">Visit Us</h5>
@@ -344,6 +361,7 @@ footer {
                         <p><i class="fas fa-clock me-2"></i><span data-translate="hours">Open daily: 10:00 AM - 10:00 PM</span></p>
                     </div>
                 </div>
+                <!-- Map -->
                 <div class="col-md-6">
                     <div class="map-container">
                         <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -354,11 +372,9 @@ footer {
     </section>
 
     <footer>
-        <p>&copy; 2024 Saray Osman Turkish Bath. All Rights Reserved.</p>
+        <p>&copy; 2024 Saray Osman Turkish Bath | All Rights Reserved</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts.js"></script>
 </body>
 </html>
