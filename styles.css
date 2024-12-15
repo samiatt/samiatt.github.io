@@ -1,29 +1,44 @@
-/* General Styles */
+/* Root Colors */
 :root {
     --background-color: #FFFFFF;
-    --text-color: #000000;
-    --interactive-color: #D2B48C;
-    --accent-pink: #FFB6C1;
+    --text-color: #333333;
+    --interactive-color: #D2B48C; 
+    --accent-pink: #FFB6C1; 
     --accent-gold: #DAA520;
-    --shadow-color: rgba(0, 0, 0, 0.08);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Lora', serif;
 }
 
+/* General Body Styles */
 body {
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: 'Playfair Display', 'Cairo', serif;
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
     margin: 0;
     padding: 0;
 }
 
+/* Header Styles */
 header {
     position: relative;
     text-align: center;
+    background-color: #000;
+    color: white;
+    padding: 0;
 }
 
 .hero img {
     width: 100%;
     height: auto;
+    object-fit: cover;
+    filter: brightness(70%);
 }
 
 .hero-overlay {
@@ -32,80 +47,138 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .language-selector button {
-    background-color: var(--interactive-color);
+    background-color: var(--accent-pink);
     border: none;
-    color: white;
-    padding: 10px 20px;
-    margin: 5px;
+    color: #fff;
+    padding: 12px 20px;
+    margin: 0 8px;
+    font-size: 1.1em;
+    font-family: var(--font-primary);
     cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
 .language-selector button:hover {
-    background-color: var(--accent-pink);
+    background-color: var(--accent-gold);
 }
 
+/* Services Section */
 #services {
-    padding: 20px;
+    padding: 50px 20px;
     text-align: center;
+    background-color: #f4f4f4;
+}
+
+#services h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: var(--font-secondary);
+    color: var(--accent-gold);
 }
 
 .service-row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
 
 .service {
-    width: 45%;
-    margin-bottom: 20px;
-    padding: 15px;
     background-color: var(--interactive-color);
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: var(--shadow-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    width: 100%;
+    max-width: 320px;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .service h3 {
     color: var(--accent-gold);
+    font-family: var(--font-secondary);
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.service p {
+    color: var(--text-color);
 }
 
 .tag {
     color: var(--accent-pink);
+    font-weight: bold;
 }
 
+/* Location Section */
 #location {
+    padding: 40px 20px;
     text-align: center;
-    padding: 20px;
+    background-color: #fff;
+}
+
+#location h2 {
+    font-size: 2em;
+    color: var(--accent-gold);
 }
 
 .map-container {
+    margin: 20px auto;
     max-width: 100%;
-    margin: auto;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
+iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* Contact Section */
 #contact {
-    padding: 20px;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
     text-align: center;
 }
 
+#contact p {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin: 10px 0;
+}
+
+/* Banner Styles */
 #offers {
     background-color: var(--accent-pink);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     font-size: 1.2em;
+    font-weight: bold;
+    display: none;
 }
 
+/* Footer Styles */
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background-color: var(--interactive-color);
     color: white;
+    font-size: 0.9em;
 }
