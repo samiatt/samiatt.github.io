@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,103 +9,72 @@
     <meta name="author" content="Saray Osman Turkish Bath">
     <title>Saray Osman Turkish Bath</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<!-- Header -->
-<header class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">Saray Osman</a>
-        <div class="language-selector">
-            <label for="language">Language:</label>
-            <select id="language" class="form-select form-select-sm" style="width: auto;">
-                <option value="en">English</option>
-                <option value="ar">العربية</option>
-            </select>
-        </div>
-        <div class="social-buttons">
-            <a href="https://www.facebook.com/profile.php?id=100092412745097&sk=about&locale=ar_AR" class="btn btn-primary">Facebook</a>
-            <a href="https://wa.me/+962793020130" class="btn btn-success">WhatsApp</a>
-        </div>
+    <!-- Map Section -->
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
     </div>
-</header>
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="container">
-        <h1 id="hero-title">Welcome to Saray Osman Turkish Bath</h1>
-        <p id="hero-description">Experience authentic relaxation and rejuvenation in Amman.</p>
-    </div>
-</section>
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Saray Osman, we offer an authentic Turkish bath experience right here in Amman. Whether you are looking for a traditional Hammam, a rejuvenating massage, or simply want to relax in our luxurious steam rooms, we provide a holistic spa experience tailored to your needs. Our services are designed to offer relaxation, wellness, and beauty in a peaceful, soothing atmosphere.</p>
+        </div>
+    </section>
 
-<!-- Services Section -->
-<section class="services">
-    <div class="container">
-        <h2 id="services-title" class="text-center mb-4">Our Services</h2>
-        <div class="row g-4">
-            <div class="col-md-4" data-aos="fade-up">
-                <div class="card">
-                    <img src="service1.webp" class="card-img-top" alt="Traditional Hammam">
-                    <div class="card-body">
-                        <h5 class="card-title" id="service1-title">Traditional Hammam</h5>
-                        <p class="card-text" id="service1-description">Enjoy a full traditional Turkish bath experience.</p>
-                        <p class="card-text" id="service1-price"><strong>Price: 20 JOD</strong></p>
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="service1.webp" class="card-img-top" alt="Traditional Hammam">
+                        <div class="card-body">
+                            <h5 class="card-title">Traditional Hammam</h5>
+                            <p class="card-text">Enjoy a full traditional Turkish bath experience.</p>
+                            <p class="card-text"><strong>Price: 20 JOD</strong></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-                <div class="card">
-                    <img src="service2.webp" class="card-img-top" alt="Aromatherapy Massage">
-                    <div class="card-body">
-                        <h5 class="card-title" id="service2-title">Aromatherapy Massage</h5>
-                        <p class="card-text" id="service2-description">Relax with our signature aromatherapy treatments.</p>
-                        <p class="card-text" id="service2-price"><strong>Price: 25 JOD</strong></p>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="service2.webp" class="card-img-top" alt="Aromatherapy Massage">
+                        <div class="card-body">
+                            <h5 class="card-title">Aromatherapy Massage</h5>
+                            <p class="card-text">Relax with our signature aromatherapy treatments.</p>
+                            <p class="card-text"><strong>Price: 25 JOD</strong></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card">
-                    <img src="service3.webp" class="card-img-top" alt="Steam Room">
-                    <div class="card-body">
-                        <h5 class="card-title" id="service3-title">Steam Room</h5>
-                        <p class="card-text" id="service3-description">Detoxify and refresh in our luxurious steam rooms.</p>
-                        <p class="card-text" id="service3-price"><strong>Price: 15 JOD</strong></p>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="service3.webp" class="card-img-top" alt="Steam Room">
+                        <div class="card-body">
+                            <h5 class="card-title">Steam Room</h5>
+                            <p class="card-text">Detoxify and refresh in our luxurious steam rooms.</p>
+                            <p class="card-text"><strong>Price: 15 JOD</strong></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Google Maps Section -->
-<section class="map">
-    <div class="container">
-        <h2 id="map-title" class="text-center mb-4">Find Us</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-    <p>&copy; 2024 Saray Osman Turkish Bath. All rights reserved.</p>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h5 id="contact-title">Contact Info</h5>
-                <p id="address">Address: Amman, Jordan</p>
-                <p id="phone">Phone: <a href="tel:+1234567890" class="text-white">+1234567890</a></p>
-                <p id="email">Email: <a href="mailto:info@sarayosman.com" class="text-white">info@sarayosman.com</a></p>
-            </div>
-            <div class="col-md-6">
-                <h5 id="follow-us-title">Follow Us</h5>
-                <p><a href="https://www.facebook.com" class="text-white">Facebook</a></p>
-                <p><a href="https://wa.me/1234567890" class="text-white">WhatsApp</a></p>
-            </div>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Saray Osman Turkish Bath. All rights reserved.</p>
+            <p><a href="mailto:info@sarayosman.com">Contact Us</a></p>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<script src="script.js"></script> <!-- Link to external JS file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
