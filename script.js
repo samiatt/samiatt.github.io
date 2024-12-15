@@ -1,6 +1,6 @@
 // Set language based on selection and store in a cookie
 function setLanguage(language) {
-    document.cookie = `language=${language};path=/;max-age=31536000`; // Set cookie for 1 year
+    document.cookie = language=${language};path=/;max-age=31536000; // Set cookie for 1 year
     loadLanguage(language);
 }
 
