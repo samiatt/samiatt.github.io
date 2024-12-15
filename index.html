@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turkish Bath</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Cairo&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -32,37 +33,74 @@
     <!-- Services Section -->
     <section class="services">
         <h2 id="services-title">Our Services</h2>
-        <div class="service" id="service1">
-            <h3 id="service1-title">Traditional Hammam</h3>
-            <p id="service1-description">A deep cleansing treatment for your skin.</p>
-        </div>
-        <div class="service" id="service2">
-            <h3 id="service2-title">Massage Therapy</h3>
-            <p id="service2-description">Relax with a full-body massage.</p>
-        </div>
-        <div class="service" id="service3">
-            <h3 id="service3-title">Facial Treatment</h3>
-            <p id="service3-description">Rejuvenate your face with our hydrating treatments.</p>
-        </div>
-        <div class="service" id="service4">
-            <h3 id="service4-title">Aromatherapy</h3>
-            <p id="service4-description">Revitalize your senses with essential oils.</p>
-        </div>
-        <div class="service" id="service5">
-            <h3 id="service5-title">Scrub & Exfoliation</h3>
-            <p id="service5-description">Exfoliate and remove dead skin cells.</p>
-        </div>
-        <div class="service" id="service6">
-            <h3 id="service6-title">Foot Reflexology</h3>
-            <p id="service6-description">Relax your feet with a soothing massage.</p>
+        <div class="service-cards">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <img src="service1.jpg" alt="Traditional Hammam">
+                <div class="card-body">
+                    <h3 class="card-title" id="service1-title">Traditional Hammam</h3>
+                    <p id="service1-description">A deep cleansing treatment for your skin.</p>
+                    <div class="price-tag">$50</div>
+                </div>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-card">
+                <img src="service2.jpg" alt="Massage Therapy">
+                <div class="card-body">
+                    <h3 class="card-title" id="service2-title">Massage Therapy</h3>
+                    <p id="service2-description">Relax with a full-body massage.</p>
+                    <div class="price-tag">$70</div>
+                </div>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-card">
+                <img src="service3.jpg" alt="Facial Treatment">
+                <div class="card-body">
+                    <h3 class="card-title" id="service3-title">Facial Treatment</h3>
+                    <p id="service3-description">Rejuvenate your face with our hydrating treatments.</p>
+                    <div class="price-tag">$40</div>
+                </div>
+            </div>
+            <!-- Service 4 -->
+            <div class="service-card">
+                <img src="service4.jpg" alt="Aromatherapy">
+                <div class="card-body">
+                    <h3 class="card-title" id="service4-title">Aromatherapy</h3>
+                    <p id="service4-description">Revitalize your senses with essential oils.</p>
+                    <div class="price-tag">$60</div>
+                </div>
+            </div>
+            <!-- Service 5 -->
+            <div class="service-card">
+                <img src="service5.jpg" alt="Scrub & Exfoliation">
+                <div class="card-body">
+                    <h3 class="card-title" id="service5-title">Scrub & Exfoliation</h3>
+                    <p id="service5-description">Exfoliate and remove dead skin cells.</p>
+                    <div class="price-tag">$30</div>
+                </div>
+            </div>
+            <!-- Service 6 -->
+            <div class="service-card">
+                <img src="service6.jpg" alt="Foot Reflexology">
+                <div class="card-body">
+                    <h3 class="card-title" id="service6-title">Foot Reflexology</h3>
+                    <p id="service6-description">Relax your feet with a soothing massage.</p>
+                    <div class="price-tag">$25</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact">
-        <h2 id="contact-title">Contact Us</h2>
-        <p id="contact-description">Visit us at: 123 Turkish Bath Street, Istanbul, Turkey</p>
-        <p id="contact-phone">Call: +90 123 456 7890</p>
+    <section class="contact-section">
+        <div class="contact-info">
+            <h5 id="contact-title">Contact Us</h5>
+            <p id="contact-description">Visit us at: 123 Turkish Bath Street, Istanbul, Turkey</p>
+            <p id="contact-phone">Call: +90 123 456 7890</p>
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=Istanbul+Turkey&output=embed" frameborder="0"></iframe>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -70,20 +108,6 @@
         <p id="footer-text">&copy; 2024 Turkish Bath. All Rights Reserved.</p>
     </footer>
 
-    <!-- Social Media Floating Icons -->
-    <div class="social-icons" id="social-icons">
-        <a href="https://www.facebook.com/yourpage" target="_blank" class="social-icon facebook">
-            <img src="facebook-logo.png" alt="Facebook">
-        </a>
-        <a href="https://wa.me/yourwhatsappnumber" target="_blank" class="social-icon whatsapp">
-            <img src="whatsapp-logo.png" alt="WhatsApp">
-        </a>
-        <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-icon instagram">
-            <img src="instagram-logo.png" alt="Instagram">
-        </a>
-    </div>
-
     <script src="script.js"></script>
-
 </body>
 </html>
