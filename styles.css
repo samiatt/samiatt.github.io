@@ -1,195 +1,83 @@
-/* Root Colors */
-:root {
-    --background-color: #FFFFFF;
-    --text-color: #000000;
-    --interactive-color: #D2B48C;
-    --accent-pink: #FFB6C1;
-    --accent-gold: #DAA520;
-    --shadow-color: rgba(0, 0, 0, 0.08);
-    --font-primary: 'Poppins', sans-serif;
-    --font-secondary: 'Cairo', serif;
+// Set language based on selection and store in a cookie
+function setLanguage(language) {
+    document.cookie = `language=${language};path=/;max-age=31536000`; // Set cookie for 1 year
+    loadLanguage(language);
 }
 
-/* Base Layout */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: var(--font-primary);
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
-/* Navigation Bar */
-.navbar {
-    height: 80px;
-    padding: 0.5rem 5%;
-    background-color: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 15px var(--shadow-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-brand {
-    font-size: 2.2rem;
-    letter-spacing: 1px;
-    color: var(--accent-gold) !important;
-}
-
-.nav-controls {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-
-.language-selector select {
-    width: 120px;
-    height: 40px;
-    padding: 0 15px;
-    border-radius: 20px;
-    background-color: var(--background-color);
-    border: 1px solid var(--accent-gold);
-    color: var(--text-color);
-    font-size: 0.9rem;
-}
-
-/* Hero Section */
-.hero {
-    height: 100vh;
-    background-image: url('luxury-hammam.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 0 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-content {
-    max-width: 800px;
-    text-align: center;
-}
-
-.hero-content h1 {
-    font-size: 4.5rem;
-    color: var(--text-color);
-}
-
-.hero-content p {
-    font-size: 1.8rem;
-    color: var(--text-color);
-    margin-top: 20px;
-}
-
-/* Services Section */
-.services {
-    padding: 6rem 10%;
-    background-color: var(--background-color);
-}
-
-.services h2 {
-    font-size: 3rem;
-    text-align: center;
-    color: var(--accent-gold);
-    margin-bottom: 4rem;
-}
-
-.service-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-}
-
-.service-card {
-    width: 300px;
-    background-color: var(--background-color);
-    border: 1px solid var(--accent-gold);
-    box-shadow: 0 10px 30px var(--shadow-color);
-    overflow: hidden;
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-}
-
-.service-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-body {
-    padding: 2rem;
-    text-align: center;
-}
-
-.card-title {
-    font-size: 1.8rem;
-    color: var(--text-color);
-}
-
-.price-tag {
-    margin-top: 10px;
-    background-color: var(--accent-gold);
-    color: var(--background-color);
-    padding: 5px 15px;
-    border-radius: 25px;
-    font-weight: bold;
-}
-
-/* Contact Section */
-.contact-section {
-    padding: 6rem 10%;
-    background-color: var(--background-color);
-}
-
-.contact-info {
-    background-color: var(--background-color);
-    padding: 3rem;
-    box-shadow: 0 10px 30px var(--shadow-color);
-    border-radius: 15px;
-    text-align: center;
-}
-
-.contact-info h5 {
-    font-size: 2rem;
-    color: var(--accent-gold);
-    margin-bottom: 2rem;
-}
-
-.contact-info p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 400px;
-    border: 0;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px var(--shadow-color);
-}
-
-/* Footer */
-footer {
-    padding: 2rem 10%;
-    background-color: var(--background-color);
-    border-top: 1px solid var(--shadow-color);
-    text-align: center;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 3.5rem;
+// Load language from cookie (or default to English)
+function loadLanguage(language) {
+    if (!language) {
+        const cookieLanguage = document.cookie.match(/language=([^;]+)/);
+        language = cookieLanguage ? cookieLanguage[1] : 'en';
     }
 
-    .service-card {
-        width: 100%;
-        margin-bottom: 2rem;
+    // Translate the page based on the selected language
+    const translations = {
+        en: {
+            "brand-name": "Turkish Bath",
+            "hero-title": "Welcome to the Turkish Bath",
+            "hero-description": "Experience ultimate relaxation in our luxurious and traditional setting.",
+            "services-title": "Our Services",
+            "service1-title": "Traditional Hammam",
+            "service1-description": "A deep cleansing treatment for your skin.",
+            "service2-title": "Massage Therapy",
+            "service2-description": "Relax with a full-body massage.",
+            "service3-title": "Facial Treatment",
+            "service3-description": "Rejuvenate your face with our hydrating treatments.",
+            "service4-title": "Aromatherapy",
+            "service4-description": "Revitalize your senses with essential oils.",
+            "service5-title": "Scrub & Exfoliation",
+            "service5-description": "Exfoliate and remove dead skin cells.",
+            "service6-title": "Foot Reflexology",
+            "service6-description": "Relax your feet with a soothing massage.",
+            "contact-title": "Contact Us",
+            "contact-description": "Visit us at: 123 Turkish Bath Street, Istanbul, Turkey",
+            "contact-phone": "Call: +90 123 456 7890",
+            "footer-text": "&copy; 2024 Turkish Bath. All Rights Reserved."
+        },
+        ar: {
+            "brand-name": "حمام تركي",
+            "hero-title": "مرحبًا بكم في الحمام التركي",
+            "hero-description": "اختبر الاسترخاء التام في بيئتنا الفاخرة والتقليدية.",
+            "services-title": "خدماتنا",
+            "service1-title": "حمام تقليدي",
+            "service1-description": "علاج عميق لتنظيف بشرتك.",
+            "service2-title": "علاج التدليك",
+            "service2-description": "استرخِ مع تدليك كامل للجسم.",
+            "service3-title": "علاج الوجه",
+            "service3-description": "تنشيط وجهك مع علاجات مرطبة.",
+            "service4-title": "العلاج بالعطور",
+            "service4-description": "تنشيط حواسك باستخدام الزيوت الأساسية.",
+            "service5-title": "تقشير البشرة",
+            "service5-description": "إزالة خلايا الجلد الميتة وتنشيط البشرة.",
+            "service6-title": "علاج القدمين بالضغط",
+            "service6-description": "استرخِ مع تدليك مريح للقدمين.",
+            "contact-title": "اتصل بنا",
+            "contact-description": "زورونا في: شارع الحمام التركي 123، إسطنبول، تركيا",
+            "contact-phone": "اتصل: +90 123 456 7890",
+            "footer-text": "&copy; 2024 الحمام التركي. جميع الحقوق محفوظة."
+        }
+    };
+
+    const trans = translations[language] || translations['en'];
+    
+    // Apply translations to all elements
+    for (const key in trans) {
+        document.getElementById(key).innerHTML = trans[key];
     }
+
+    // Adjust the layout based on language
+    if (language === 'ar') {
+        document.querySelector('.navbar').classList.add('brand-right');
+        document.querySelector('.navbar .language-selector').style.justifyContent = 'flex-end';
+    } else {
+        document.querySelector('.navbar').classList.remove('brand-right');
+        document.querySelector('.navbar .language-selector').style.justifyContent = 'flex-start';
+    }
+}
+
+// Load language from cookie on page load
+window.onload = function() {
+    const language = document.cookie.match(/language=([^;]+)/) ? document.cookie.match(/language=([^;]+)/)[1] : 'en';
+    loadLanguage(language);
 }
