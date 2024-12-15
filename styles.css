@@ -39,7 +39,7 @@ body {
 
 .nav-controls {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem; /* Reduced gap */
     align-items: center;
 }
 
@@ -178,7 +178,7 @@ body {
 .social-buttons a,
 .footer-social-buttons a {
     font-size: 3rem;
-    margin: 0 15px;
+    margin: 0 10px; /* Reduced spacing */
     padding: 10px;
     text-decoration: none;
     display: inline-block;
@@ -187,7 +187,7 @@ body {
 /* Specific to Navbar */
 .social-buttons {
     display: flex;
-    gap: 15px;
+    gap: 10px; /* Reduced gap */
     align-items: center;
 }
 
@@ -200,7 +200,7 @@ body {
 
 .footer-social-icon {
     font-size: 3rem;
-    margin: 0 20px;
+    margin: 0 15px; /* Reduced spacing */
     padding: 10px;
     text-decoration: none;
 }
