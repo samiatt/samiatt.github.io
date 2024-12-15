@@ -11,7 +11,7 @@ function loadLanguage(language) {
         language = cookieLanguage ? cookieLanguage[1] : 'en';
     }
 
-    // Translate the page based on the selected language
+    // Translations for various sections of the page
     const translations = {
         en: {
             "brand-name": "Turkish Bath",
@@ -59,11 +59,15 @@ function loadLanguage(language) {
         }
     };
 
+    // Select the appropriate language translation
     const trans = translations[language] || translations['en'];
 
     // Apply translations to all elements
     for (const key in trans) {
-        document.getElementById(key).innerHTML = trans[key];
+        const element = document.getElementById(key);
+        if (element) {
+            element.innerHTML = trans[key];
+        }
     }
 }
 
