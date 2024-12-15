@@ -65,6 +65,15 @@ function loadLanguage(language) {
     for (const key in trans) {
         document.getElementById(key).innerHTML = trans[key];
     }
+
+    // Adjust the layout based on language
+    if (language === 'ar') {
+        document.querySelector('.navbar').classList.add('brand-right');
+        document.querySelector('.navbar .language-selector').style.justifyContent = 'flex-end';
+    } else {
+        document.querySelector('.navbar').classList.remove('brand-right');
+        document.querySelector('.navbar .language-selector').style.justifyContent = 'flex-start';
+    }
 }
 
 // Load language from cookie on page load
