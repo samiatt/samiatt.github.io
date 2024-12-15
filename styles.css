@@ -177,22 +177,16 @@ body {
 /* General Social Media Button Styles */
 .social-buttons a,
 .footer-social-buttons a {
-    font-size: 1.8rem; /* Medium-sized icons */
-    color: var(--accent-gold); /* Change to your desired color */
-    margin: 0 10px;
+    font-size: 2.5rem; /* Increase the icon size to make them bigger */
+    margin: 0 15px;
+    padding: 10px; /* Add some padding around the icons */
     text-decoration: none;
+    display: inline-block;
 }
 
 .social-buttons a:hover,
 .footer-social-buttons a:hover {
-    color: #333; /* Change to your desired hover color */
-}
-
-/* Optional: Add some space between navbar items */
-.nav-controls {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
+    opacity: 0.8; /* Add a subtle effect when hovering */
 }
 
 /* Specific to Navbar */
@@ -210,16 +204,15 @@ body {
 }
 
 .footer-social-icon {
-    font-size: 2rem; /* Larger in footer */
-    color: var(--accent-gold);
-    margin: 0 15px;
+    font-size: 3rem; /* Even larger in footer */
+    margin: 0 20px;
+    padding: 10px;
     text-decoration: none;
 }
 
 .footer-social-icon:hover {
-    color: #333; /* Footer hover color */
+    opacity: 0.8; /* Add hover effect in footer as well */
 }
-
 
 /* Footer */
 footer {
