@@ -4,80 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turkish Bath</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Cairo&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Navigation Bar -->
-    <div class="navbar">
-        <a href="#" class="navbar-brand">Turkish Bath</a>
+    <nav class="navbar">
+        <div class="navbar-brand" id="brand-name">Turkish Bath</div>
         <div class="nav-controls">
             <div class="language-selector">
-                <select id="language-select" onchange="changeLanguage()">
+                <select id="language-select" onchange="setLanguage(this.value)">
                     <option value="en">English</option>
                     <option value="ar">Arabic</option>
                 </select>
             </div>
         </div>
-    </div>
+    </nav>
 
     <!-- Hero Section -->
-    <div class="hero">
+    <section class="hero">
         <div class="hero-content">
-            <h1>Welcome to the Turkish Bath</h1>
-            <p>Experience ultimate relaxation in our luxurious and traditional setting.</p>
+            <h1 id="hero-title">Welcome to the Turkish Bath</h1>
+            <p id="hero-description">Experience ultimate relaxation in our luxurious and traditional setting.</p>
         </div>
-    </div>
+    </section>
 
     <!-- Services Section -->
     <section class="services">
-        <h2>Our Services</h2>
+        <h2 id="services-title">Our Services</h2>
         <div class="service-cards">
+            <!-- Service 1 -->
             <div class="service-card">
-                <img src="service1.jpg" alt="Service 1">
+                <img src="service1.jpg" alt="Traditional Hammam">
                 <div class="card-body">
-                    <h3>Massage</h3>
-                    <p>A relaxing massage in our authentic Turkish bath.</p>
+                    <h3 class="card-title" id="service1-title">Traditional Hammam</h3>
+                    <p id="service1-description">A deep cleansing treatment for your skin.</p>
                     <div class="price-tag">$50</div>
                 </div>
             </div>
+            <!-- Service 2 -->
             <div class="service-card">
-                <img src="service2.jpg" alt="Service 2">
+                <img src="service2.jpg" alt="Massage Therapy">
                 <div class="card-body">
-                    <h3>Steam Bath</h3>
-                    <p>A detoxifying steam bath to rejuvenate your body.</p>
+                    <h3 class="card-title" id="service2-title">Massage Therapy</h3>
+                    <p id="service2-description">Relax with a full-body massage.</p>
+                    <div class="price-tag">$70</div>
+                </div>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-card">
+                <img src="service3.jpg" alt="Facial Treatment">
+                <div class="card-body">
+                    <h3 class="card-title" id="service3-title">Facial Treatment</h3>
+                    <p id="service3-description">Rejuvenate your face with our hydrating treatments.</p>
                     <div class="price-tag">$40</div>
                 </div>
             </div>
+            <!-- Service 4 -->
             <div class="service-card">
-                <img src="service3.jpg" alt="Service 3">
+                <img src="service4.jpg" alt="Aromatherapy">
                 <div class="card-body">
-                    <h3>Facial</h3>
-                    <p>Get glowing skin with a luxurious facial treatment.</p>
+                    <h3 class="card-title" id="service4-title">Aromatherapy</h3>
+                    <p id="service4-description">Revitalize your senses with essential oils.</p>
                     <div class="price-tag">$60</div>
                 </div>
             </div>
+            <!-- Service 5 -->
             <div class="service-card">
-                <img src="service4.jpg" alt="Service 4">
+                <img src="service5.jpg" alt="Scrub & Exfoliation">
                 <div class="card-body">
-                    <h3>Body Scrub</h3>
-                    <p>Exfoliate and revitalize your skin with a traditional body scrub.</p>
-                    <div class="price-tag">$45</div>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="service5.jpg" alt="Service 5">
-                <div class="card-body">
-                    <h3>Private Hammam</h3>
-                    <p>Experience a private Turkish bath with personalized services.</p>
-                    <div class="price-tag">$100</div>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="service6.jpg" alt="Service 6">
-                <div class="card-body">
-                    <h3>Foot Massage</h3>
-                    <p>Relax your feet with a soothing foot massage.</p>
+                    <h3 class="card-title" id="service5-title">Scrub & Exfoliation</h3>
+                    <p id="service5-description">Exfoliate and remove dead skin cells.</p>
                     <div class="price-tag">$30</div>
+                </div>
+            </div>
+            <!-- Service 6 -->
+            <div class="service-card">
+                <img src="service6.jpg" alt="Foot Reflexology">
+                <div class="card-body">
+                    <h3 class="card-title" id="service6-title">Foot Reflexology</h3>
+                    <p id="service6-description">Relax your feet with a soothing massage.</p>
+                    <div class="price-tag">$25</div>
                 </div>
             </div>
         </div>
@@ -85,16 +93,19 @@
 
     <!-- Contact Section -->
     <section class="contact-section">
-        <h5>Contact Us</h5>
-        <p>Visit us at: 123 Turkish Bath Street, Istanbul, Turkey</p>
-        <div class="map-container">
-            <iframe src="https://maps.google.com/maps?q=Istanbul%2C%20Turkey&output=embed" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+        <div class="contact-info">
+            <h5 id="contact-title">Contact Us</h5>
+            <p id="contact-description">Visit us at: 123 Turkish Bath Street, Istanbul, Turkey</p>
+            <p id="contact-phone">Call: +90 123 456 7890</p>
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=Istanbul+Turkey&output=embed" frameborder="0"></iframe>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Turkish Bath. All Rights Reserved.</p>
+        <p id="footer-text">&copy; 2024 Turkish Bath. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
