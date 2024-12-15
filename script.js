@@ -14,7 +14,7 @@ function loadLanguage(language) {
     // Translations for various sections of the page
     const translations = {
         en: {
-            "brand-name": "saray Osman",
+            "brand-name": "Saray Osman",
             "hero-title": "Welcome to Saray Osman",
             "hero-description": "Experience ultimate relaxation in our luxurious and traditional setting.",
             "services-title": "Our Services",
