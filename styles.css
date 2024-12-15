@@ -43,15 +43,71 @@ body {
     align-items: center;
 }
 
-.language-selector select {
-    width: 120px;
-    height: 40px;
-    padding: 0 15px;
-    border-radius: 20px;
-    background-color: var(--background-color);
-    border: 1px solid var(--accent-gold);
-    color: var(--text-color);
-    font-size: 0.9rem;
+/* Social Media Buttons */
+.social-buttons a,
+.footer-social-buttons a {
+    font-size: 2.5rem; /* Increase the icon size */
+    margin: 0 15px;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    color: inherit; /* Ensure icons inherit the color */
+}
+
+.social-buttons a:hover,
+.footer-social-buttons a:hover {
+    opacity: 0.8;
+}
+
+/* Navbar Social Media Buttons */
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Footer Social Media Buttons */
+.footer-social-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.footer-social-icon {
+    font-size: 3rem; /* Even larger in footer */
+    margin: 0 20px;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-social-icon:hover {
+    opacity: 0.8;
+}
+
+/* Specific Icons Color (original brand color) */
+.social-buttons .facebook {
+    color: #1877F2; /* Facebook blue */
+}
+
+.social-buttons .whatsapp {
+    color: #25D366; /* WhatsApp green */
+}
+
+.social-buttons .instagram {
+    color: #E4405F; /* Instagram pink */
+}
+
+.footer-social-icon.facebook {
+    color: #1877F2; /* Facebook blue */
+}
+
+.footer-social-icon.whatsapp {
+    color: #25D366; /* WhatsApp green */
+}
+
+.footer-social-icon.instagram {
+    color: #E4405F; /* Instagram pink */
 }
 
 /* Hero Section */
@@ -183,46 +239,6 @@ body {
     border: 0;
     border-radius: 15px;
     box-shadow: 0 10px 30px var(--shadow-color);
-}
-
-/* General Social Media Button Styles */
-.social-buttons a,
-.footer-social-buttons a {
-    font-size: 2.5rem; /* Increase the icon size */
-    margin: 0 15px;
-    padding: 10px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.social-buttons a:hover,
-.footer-social-buttons a:hover {
-    opacity: 0.8;
-}
-
-/* Specific to Navbar */
-.social-buttons {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-/* Specific to Footer */
-.footer-social-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.footer-social-icon {
-    font-size: 3rem; /* Even larger in footer */
-    margin: 0 20px;
-    padding: 10px;
-    text-decoration: none;
-}
-
-.footer-social-icon:hover {
-    opacity: 0.8;
 }
 
 /* Footer */
