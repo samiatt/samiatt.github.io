@@ -1,10 +1,10 @@
-// Cookie handling for language preference
+// Language selector - Save selected language to a cookie
 function setLanguage(lang) {
     document.cookie = `lang=${lang}; path=/; max-age=31536000`; // 1 year
     location.reload();
 }
 
-// Check and apply the saved language preference
+// Cookie handling for language preference
 document.addEventListener('DOMContentLoaded', () => {
     const lang = getCookie('lang');
     if (lang) {
