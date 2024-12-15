@@ -14,8 +14,8 @@ function loadLanguage(language) {
     // Translations for various sections of the page
     const translations = {
         en: {
-            "brand-name": "Qaser Osman",
-            "hero-title": "Welcome to Qaser Osman",
+            "brand-name": "saray Osman",
+            "hero-title": "Welcome to Saray Osman",
             "hero-description": "Experience ultimate relaxation in our luxurious and traditional setting.",
             "services-title": "Our Services",
             "service1-title": "Traditional Hammam",
@@ -33,7 +33,7 @@ function loadLanguage(language) {
             "contact-title": "Contact Us",
             "contact-description": "Visit us at: Prs Taghreed Mohammad St,Marj Al Hamam, Amman, Jordan",
             "contact-phone": "Call: +962 7 9302 0130",
-            "footer-text": "&copy; 2024 Qaser Osman. All Rights Reserved."
+            "footer-text": "&copy; 2024 Saray Osman. All Rights Reserved."
         },
         ar: {
             "brand-name": "قصر عثمان",
