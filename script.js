@@ -1,17 +1,15 @@
-// Set language based on selection and store in a cookie
 function setLanguage(language) {
-    document.cookie = `language=${language};path=/;max-age=31536000`; // Set cookie for 1 year
+    document.cookie = "language=" + language + "; path=/";
     loadLanguage(language);
 }
 
-// Load language from cookie (or default to English)
 function loadLanguage(language) {
     if (!language) {
         const cookieLanguage = document.cookie.match(/language=([^;]+)/);
         language = cookieLanguage ? cookieLanguage[1] : 'en';
     }
 
-    // Translate the page based on the selected language
+    // Translations
     const translations = {
         en: {
             "brand-name": "Turkish Bath",
@@ -60,10 +58,20 @@ function loadLanguage(language) {
     };
 
     const trans = translations[language] || translations['en'];
-    
+
     // Apply translations to all elements
     for (const key in trans) {
         document.getElementById(key).innerHTML = trans[key];
+    }
+
+    // Update the social icons position
+    const socialIcons = document.getElementById('social-icons');
+    if (language === 'ar') {
+        socialIcons.classList.add('ar');
+        socialIcons.classList.remove('en');
+    } else {
+        socialIcons.classList.add('en');
+        socialIcons.classList.remove('ar');
     }
 }
 
