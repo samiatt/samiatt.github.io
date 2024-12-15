@@ -31,7 +31,7 @@ function loadLanguage(language) {
             "service6-title": "Foot Reflexology",
             "service6-description": "Relax your feet with a soothing massage.",
             "contact-title": "Contact Us",
-            "contact-description": "Visit us at: Marj Al Hamam, Jordan · Amman, Jordan",
+            "contact-description": "Visit us at: Prs Taghreed Mohammad St,Marj Al Hamam, Amman, Jordan",
             "contact-phone": "Call: +962 7 9302 0130",
             "footer-text": "&copy; 2024 Qaser Osman. All Rights Reserved."
         },
@@ -53,8 +53,8 @@ function loadLanguage(language) {
             "service6-title": "علاج القدمين بالضغط",
             "service6-description": "استرخِ مع تدليك مريح للقدمين.",
             "contact-title": "اتصل بنا",
-            "contact-description": "زورونا في: مرج الحمام، الأردن · عمان، الأردن",
-            "contact-phone": "اتصل: +٩٦٢ ٧ ٩٣٠٢ ٠١٣٠",
+            "contact-description": "زورونا في: شارع الاميرة تغريد,مرج الحمام، الأردن · عمان، الأردن",
+            "contact-phone": "+962 7 9302 0130:اتصل",
             "footer-text": "&copy; 2024 قصر عثمان. جميع الحقوق محفوظة."
         }
 
