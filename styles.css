@@ -54,15 +54,52 @@ body {
     font-size: 0.9rem;
 }
 
-.social-media-buttons a {
-    color: var(--text-color);
-    font-size: 1.6rem;
-    margin-left: 15px;
-    transition: color 0.3s ease;
+/* Social Media Icons */
+.social-media-buttons a,
+.social-media-footer a {
+    font-size: 2.5rem;
+    margin-left: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.social-media-buttons a:hover {
-    color: var(--accent-gold); /* Change to any color you like */
+.social-icon {
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #fff;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Facebook */
+.facebook {
+    background-color: #3b5998;
+}
+
+.facebook:hover {
+    background-color: #2d4373;
+}
+
+/* WhatsApp */
+.whatsapp {
+    background-color: #25d366;
+}
+
+.whatsapp:hover {
+    background-color: #128c7e;
+}
+
+/* Instagram */
+.instagram {
+    background-color: #e4405f;
+}
+
+.instagram:hover {
+    background-color: #c13584;
 }
 
 /* Hero Section */
@@ -103,17 +140,6 @@ footer {
 
 .social-media-footer {
     margin-bottom: 20px;
-}
-
-.social-media-footer a {
-    color: var(--text-color);
-    font-size: 2rem;
-    margin-right: 15px;
-    transition: color 0.3s ease;
-}
-
-.social-media-footer a:hover {
-    color: var(--accent-gold);
 }
 
 /* Responsive Design */
