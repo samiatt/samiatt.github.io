@@ -14,8 +14,8 @@ function loadLanguage(language) {
     // Translations for various sections of the page
     const translations = {
         en: {
-            "brand-name": "Turkish Bath",
-            "hero-title": "Welcome to the Turkish Bath",
+            "brand-name": "Qaser Osman",
+            "hero-title": "Welcome to Qaser Osman",
             "hero-description": "Experience ultimate relaxation in our luxurious and traditional setting.",
             "services-title": "Our Services",
             "service1-title": "Traditional Hammam",
@@ -31,13 +31,13 @@ function loadLanguage(language) {
             "service6-title": "Foot Reflexology",
             "service6-description": "Relax your feet with a soothing massage.",
             "contact-title": "Contact Us",
-            "contact-description": "Visit us at: 123 Turkish Bath Street, Istanbul, Turkey",
-            "contact-phone": "Call: +90 123 456 7890",
-            "footer-text": "&copy; 2024 Turkish Bath. All Rights Reserved."
+            "contact-description": "Visit us at: Marj Al Hamam, Jordan · Amman, Jordan",
+            "contact-phone": "Call: +962 7 9302 0130",
+            "footer-text": "&copy; 2024 Qaser Osman. All Rights Reserved."
         },
         ar: {
-            "brand-name": "حمام تركي",
-            "hero-title": "مرحبًا بكم في الحمام التركي",
+            "brand-name": "قصر عثمان",
+            "hero-title": "مرحبًا بكم في قصر عثمان",
             "hero-description": "اختبر الاسترخاء التام في بيئتنا الفاخرة والتقليدية.",
             "services-title": "خدماتنا",
             "service1-title": "حمام تقليدي",
@@ -53,10 +53,11 @@ function loadLanguage(language) {
             "service6-title": "علاج القدمين بالضغط",
             "service6-description": "استرخِ مع تدليك مريح للقدمين.",
             "contact-title": "اتصل بنا",
-            "contact-description": "زورونا في: شارع الحمام التركي 123، إسطنبول، تركيا",
-            "contact-phone": "اتصل: +90 123 456 7890",
-            "footer-text": "&copy; 2024 الحمام التركي. جميع الحقوق محفوظة."
+            "contact-description": "زورونا في: مرج الحمام، الأردن · عمان، الأردن",
+            "contact-phone": "اتصل: +٩٦٢ ٧ ٩٣٠٢ ٠١٣٠",
+            "footer-text": "&copy; 2024 قصر عثمان. جميع الحقوق محفوظة."
         }
+
     };
 
     // Select the appropriate language translation
