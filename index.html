@@ -3,78 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Turkish Bath</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Cairo&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'YOUR_TRACKING_ID');
-    </script>
 </head>
 <body>
-    <header>
-        <div class="hero">
-            <img src="hero-image.jpg" alt="Turkish Bath" />
-            <div class="hero-overlay">
-                <div class="language-selector">
-                    <button onclick="setLanguage('en')">EN</button>
-                    <button onclick="setLanguage('ar')">AR</button>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">Turkish Bath</div>
+        <div class="nav-controls">
+            <div class="language-selector">
+                <select onchange="setLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="ar">Arabic</option>
+                </select>
+            </div>
+            <div class="social-buttons">
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to the Turkish Bath</h1>
+            <p>Experience ultimate relaxation in our luxurious and traditional setting.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <!-- Example Service Card -->
+            <div class="service-card">
+                <img src="service1.jpg" alt="Service 1">
+                <div class="card-body">
+                    <h3 class="card-title">Traditional Hammam</h3>
+                    <p>A deep cleansing treatment for your skin.</p>
+                    <div class="price-tag">$50</div>
                 </div>
             </div>
+            <!-- Add more services as needed -->
         </div>
-    </header>
+    </section>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-row">
-            <div class="service">
-                <h3>Relaxing Massage</h3>
-                <p>A soothing full-body massage to release tension.</p>
-                <p><span class="tag">Time: 60 min</span> | <span class="tag">Price: $50</span></p>
-            </div>
-            <div class="service">
-                <h3>Facial Treatment</h3>
-                <p>Revitalize your skin with a deep cleansing facial.</p>
-                <p><span class="tag">Time: 45 min</span> | <span class="tag">Price: $40</span></p>
-            </div>
-            <div class="service">
-                <h3>Traditional Hammam</h3>
-                <p>Experience the ancient Turkish bath ritual.</p>
-                <p><span class="tag">Time: 90 min</span> | <span class="tag">Price: $80</span></p>
-            </div>
-            <div class="service">
-                <h3>Foot Scrub</h3>
-                <p>A refreshing exfoliation for your feet.</p>
-                <p><span class="tag">Time: 30 min</span> | <span class="tag">Price: $30</span></p>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-info">
+            <h5>Contact Us</h5>
+            <p>Visit us at: 123 Turkish Bath Street, Istanbul, Turkey</p>
+            <p>Call: +90 123 456 7890</p>
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=Istanbul+Turkey&output=embed"></iframe>
             </div>
         </div>
     </section>
 
-    <section id="location">
-        <h2>Find Us</h2>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_IFRAME_LINK" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Information</h2>
-        <p>Working Hours: Monday to Sunday, 10 AM - 8 PM</p>
-        <p>Email: info@turkishbath.com</p>
-        <p>Phone: +123 456 7890</p>
-    </section>
-
-    <section id="offers" class="banner" style="display: none;">
-        <p>Special Offer: 10% off on all services!</p>
-    </section>
-
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Turkish Bath</p>
+        <p>&copy; 2024 Turkish Bath. All Rights Reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
