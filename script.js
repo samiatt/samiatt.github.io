@@ -1,7 +1,7 @@
 // Set language based on selection and store in a cookie
 function setLanguage(language) {
     document.cookie = "language=" + language + ";path=/;max-age=31536000"; // Set cookie for 1 year
-    loadLanguage();  // Load the language and redirect to the correct URL
+    loadLanguage();  // Reload the page with the correct language URL
 }
 
 // Load language from cookie (or default to Arabic if no cookie is found)
@@ -21,12 +21,16 @@ function loadLanguage() {
     const englishUrl = baseUrl + "/en";
 
     // Check and redirect based on the language
-    if (language === "ar" && !currentUrl.startsWith(baseUrl)) {
-        // Redirect to Arabic if the user is not already on the Arabic site
-        window.location.href = baseUrl;
-    } else if (language === "en" && !currentUrl.startsWith(englishUrl)) {
-        // Redirect to English if the user is not already on the English site
-        window.location.href = englishUrl;
+    if (language === "ar") {
+        if (!currentUrl.startsWith(baseUrl)) {
+            // Redirect to Arabic if the user is not already on the Arabic site
+            window.location.href = baseUrl;
+        }
+    } else if (language === "en") {
+        if (!currentUrl.startsWith(englishUrl)) {
+            // Redirect to English if the user is not already on the English site
+            window.location.href = englishUrl;
+        }
     }
 }
 
