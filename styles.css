@@ -6,6 +6,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    transition: all 0.3s ease;
 }
 
 /* Navigation Bar */
@@ -17,10 +18,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
-.navbar.brand-right {
-    justify-content: flex-end;
+/* When Arabic is selected, reverse the order */
+body[lang="ar"] .navbar {
+    flex-direction: row-reverse; /* Move brand to the right and language selector to the left */
 }
 
 .navbar .navbar-brand {
@@ -29,8 +32,10 @@ body {
     color: var(--accent-gold) !important;
     margin-right: 3rem;
     text-align: left;
+    transition: all 0.3s ease;
 }
 
+/* Language Selector */
 .navbar .language-selector {
     display: flex;
     justify-content: flex-start;
