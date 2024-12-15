@@ -18,40 +18,11 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-/* Utility Classes */
-.text-center {
-    text-align: center;
-}
-
-.flex {
-    display: flex;
-    align-items: center;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
-.gap-1rem {
-    gap: 1rem;
-}
-
-.gap-2rem {
-    gap: 2rem;
 }
 
 /* Navigation Bar */
 .navbar {
-    height: auto;
+    height: 80px;
     padding: 0.5rem 5%;
     background-color: rgba(255, 255, 255, 0.98);
     box-shadow: 0 2px 15px var(--shadow-color);
@@ -64,16 +35,14 @@ body {
     font-size: 2.2rem;
     letter-spacing: 1px;
     color: var(--accent-gold) !important;
-    flex: 1; /* Ensures consistent sizing */
 }
 
 .nav-controls {
     display: flex;
-    gap: 1.5rem; /* Adjusted for responsiveness */
+    gap: 1.5rem; /* Reduced gap */
     align-items: center;
 }
 
-/* Language Selector */
 .language-selector select {
     width: 120px;
     height: 40px;
@@ -103,7 +72,7 @@ body {
 }
 
 .hero-content h1 {
-    font-size: clamp(2.5rem, 5vw, 4.5rem); /* Responsive scaling */
+    font-size: 4.5rem;
     color: var(--text-color);
 }
 
@@ -127,23 +96,24 @@ body {
 }
 
 .service-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
-    justify-items: center;
+    justify-content: center;
 }
 
 .service-card {
-    width: 100%;
-    max-width: 300px;
-    min-height: 400px;
+    width: 300px;
     background-color: var(--background-color);
     border: 1px solid var(--accent-gold);
     box-shadow: 0 10px 30px var(--shadow-color);
+    overflow: hidden;
     border-radius: 15px;
     transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
 }
 
 .service-card img {
@@ -153,27 +123,22 @@ body {
 }
 
 .card-body {
-    flex-grow: 1;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     text-align: center;
 }
 
 .card-title {
     font-size: 1.8rem;
     color: var(--text-color);
-    margin-bottom: 1rem;
 }
 
 .price-tag {
+    margin-top: 10px;
     background-color: var(--accent-gold);
     color: var(--background-color);
     padding: 5px 15px;
     border-radius: 25px;
     font-weight: bold;
-    align-self: center;
 }
 
 /* Contact Section */
@@ -196,6 +161,11 @@ body {
     margin-bottom: 2rem;
 }
 
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
 .map-container iframe {
     width: 100%;
     height: 400px;
@@ -204,23 +174,62 @@ body {
     box-shadow: 0 10px 30px var(--shadow-color);
 }
 
-/* Social Buttons */
-.social-buttons,
+/* General Social Media Button Styles */
+.social-buttons a,
+.footer-social-buttons a {
+    font-size: 3rem;
+    margin: 0 10px; /* Reduced spacing */
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Specific to Navbar */
+.social-buttons {
+    display: flex;
+    gap: 10px; /* Reduced gap */
+    align-items: center;
+}
+
+/* Specific to Footer */
 .footer-social-buttons {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 10px; /* Ensure consistent spacing */
+    margin-top: 1rem;
+    flex-wrap: nowrap; /* Ensure items stay on the same line */
 }
 
-.social-buttons a,
-.footer-social-buttons a {
-    font-size: 2.5rem;
+.footer-social-icon {
+    font-size: 3rem;
+    margin: 0 15px; /* Reduced spacing */
     padding: 10px;
     text-decoration: none;
 }
 
 .footer-social-icon:hover {
+    opacity: 0.8;
+}
+
+/* Icon Colors for Specific Social Media Platforms */
+.social-buttons .fab.fa-facebook,
+.footer-social-buttons .fab.fa-facebook {
+    color: #1877f2;
+}
+
+.social-buttons .fab.fa-whatsapp,
+.footer-social-buttons .fab.fa-whatsapp {
+    color: #25d366;
+}
+
+.social-buttons .fab.fa-instagram,
+.footer-social-buttons .fab.fa-instagram {
+    color: #e1306c;
+}
+
+/* Hover Effects */
+.social-buttons a:hover,
+.footer-social-buttons a:hover {
     opacity: 0.8;
 }
 
@@ -234,12 +243,48 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
     .navbar {
         flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .nav-controls {
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .service-card {
-        max-width: 100%;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .services h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact-section {
+        padding: 3rem 5%;
+    }
+
+    .contact-info h5 {
+        font-size: 1.8rem;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+    }
+
+    .map-container iframe {
+        height: 300px;
     }
 }
 
@@ -250,5 +295,34 @@ footer {
 
     .hero-content p {
         font-size: 1rem;
+    }
+
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .language-selector select {
+        width: 100%;
+    }
+
+    .service-card {
+        padding: 1rem;
+    }
+
+    .contact-section {
+        padding: 2rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+    .footer-social-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .footer-social-icon {
+        font-size: 2rem;
     }
 }
