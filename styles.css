@@ -43,24 +43,6 @@ body {
     align-items: center;
 }
 
-/* Add space for social media buttons in the navbar */
-.nav-controls {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-
-.social-media-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.social-media-buttons a img {
-    width: 25px;
-    height: 25px;
-}
-
-
 .language-selector select {
     width: 120px;
     height: 40px;
