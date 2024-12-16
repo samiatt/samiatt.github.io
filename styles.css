@@ -1,117 +1,106 @@
-/* Reset some default styles */
-* {
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set global font family */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
+/* Page Container */
+.page-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: 600;
     color: #333;
 }
 
-/* Navbar styles */
-.navbar {
-    background-color: #2c3e50;
-    padding: 20px;
-    text-align: center;
+.brand-name-en {
+    display: inline-block;
+    font-size: 28px;
+    color: #333;
 }
 
-.navbar-brand {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    color: white;
-    text-transform: uppercase;
+.brand-name-ar {
+    display: inline-block;
+    font-size: 28px;
+    color: #333;
+    direction: rtl;
 }
 
-/* Hero section */
-.hero {
-    background-image: url('your-image-url.jpg'); /* Add a beautiful background image */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+.social-media-links {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
-.hero-content {
-    max-width: 700px;
-    margin: 0 20px;
-}
-
-#hero-title {
-    font-size: 48px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-#hero-description {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-#coming-soon-message {
-    font-size: 22px;
-    font-weight: bold;
-}
-
-/* Contact section */
-.contact-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #ecf0f1;
-}
-
-.contact-info h5 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.social-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .social-icon {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    transition: all 0.3s ease;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
 }
 
 .social-icon:hover {
-    color: #3498db;
-    transform: scale(1.1);
+    color: #007BFF;
 }
 
-/* Footer */
-footer {
-    background-color: #2c3e50;
-    color: white;
+/* Main Content Styles */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.text-ar, .text-en {
+    width: 45%;
+}
+
+.text-ar {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+}
+
+.text-en {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Footer Styles */
+.footer {
     text-align: center;
-    padding: 10px 0;
-}
-
-#footer-text {
+    padding: 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    margin-top: 30px;
     font-size: 14px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #hero-title {
-        font-size: 32px;
-    }
-    
-    #hero-description {
-        font-size: 18px;
-    }
-
-    .social-buttons a {
-        font-size: 2rem;
-    }
+    color: #333;
 }
