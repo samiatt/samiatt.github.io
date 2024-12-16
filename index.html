@@ -15,10 +15,12 @@
     <meta property="og:image" content="path-to-your-image.jpg">
     <meta property="og:url" content="https://sarayosman.com">
     <meta property="og:type" content="website">
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<nav class="navbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="navbar-brand" id="brand-name">حمام قصر عثمان | Saray Osman</div>
     <div class="nav-controls">
         <div class="social-buttons">
@@ -35,25 +37,37 @@
     </div>
 </nav>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1 id="hero-title">مرحبًا بكم في حمام قصر عثمان | Welcome to Saray Osman</h1>
-        <p id="hero-description">.استمتع بالاسترخاء في بيئتنا الفاخرة. موقعنا الإلكتروني قيد التطوير، لكننا هنا لمساعدتك! تواصل معنا عبر وسائل التواصل الاجتماعي أو اتصل بنا للحصول على المزيد من المعلومات<br>Relax and unwind in our luxurious environment. Our website is under development, but we're here to help! Connect with us via social media or give us a call for more details.</p>
-    </div>
-</section>
-
-<section class="contact-section">
-    <div class="contact-info">
-        <h5 id="contact-title">اتصل بنا | Contact Us</h5>
-        <p id="contact-description">زورونا في: شارع الاميرة تغريد ,مرج الحمام، الأردن | Visit us at: Princess Taghreed Street, Marj Al-Hamam, Amman, Jordan</p>
-        <p id="contact-phone">اتصل بنا: 0793020130 | Call us: 0793020130</p>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.6953427034587!2d35.849902276296625!3d31.887699674048164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca7ab276a44ed%3A0x73c60928f6dfa31a!2z2K3Zhdin2YUg2YLYtdixINi52KvZhdin2YYg2KfZhNiq2LHZg9mK!5e0!3m2!1sen!2sro!4v1734234016775!5m2!1sen!2sro" frameborder="0"></iframe>
+<section class="container my-5">
+    <div class="row">
+        <!-- Arabic Section -->
+        <div class="col-md-6 text-right">
+            <h1 id="hero-title">مرحبًا بكم في حمام قصر عثمان</h1>
+            <p id="hero-description">استمتع بالاسترخاء في بيئتنا الفاخرة. موقعنا الإلكتروني قيد التطوير، لكننا هنا لمساعدتك! تواصل معنا عبر وسائل التواصل الاجتماعي أو اتصل بنا للحصول على المزيد من المعلومات.</p>
+        </div>
+        <!-- English Section -->
+        <div class="col-md-6 text-left">
+            <h1 id="hero-title">Welcome to Saray Osman</h1>
+            <p id="hero-description">Relax and unwind in our luxurious environment. Our website is under development, but we're here to help! Connect with us via social media or give us a call for more details.</p>
         </div>
     </div>
 </section>
 
-<footer>
+<section class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h5 id="contact-title">اتصل بنا | Contact Us</h5>
+            <p id="contact-description">زورونا في: شارع الاميرة تغريد ,مرج الحمام، الأردن | Visit us at: Princess Taghreed Street, Marj Al-Hamam, Amman, Jordan</p>
+            <p id="contact-phone">اتصل بنا: 0793020130 | Call us: 0793020130</p>
+        </div>
+        <div class="col-md-6">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.6953427034587!2d35.849902276296625!3d31.887699674048164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca7ab276a44ed%3A0x73c60928f6dfa31a!2z2K3Zhdin2YUg2YLYtdixINi52KvZhdin2YYg2KfZhNiq2LHZg9mK!5e0!3m2!1sen!2sro!4v1734234016775!5m2!1sen!2sro" frameborder="0" style="width: 100%; height: 300px;"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="text-center py-4">
     <p id="footer-text">&copy; 2024 قصر عثمان | Saray Osman. جميع الحقوق محفوظة | All Rights Reserved</p>
     <div class="footer-social-buttons">
         <a href="https://www.facebook.com/profile.php?id=100092412745097" target="_blank" class="footer-social-icon">
@@ -68,6 +82,10 @@
     </div>
 </footer>
 
-<script src="script.js"></script>
+<!-- Include Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
