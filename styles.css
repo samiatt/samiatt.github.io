@@ -23,14 +23,12 @@ body {
 /* Navigation Bar */
 .navbar {
     height: 80px;
-    padding: 1rem 5%; /* Increased padding */
+    padding: 0.5rem 5%;
     background-color: rgba(255, 255, 255, 0.98);
     box-shadow: 0 2px 15px var(--shadow-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10; /* Added z-index to ensure it's above the hero */
-    position: relative;
 }
 
 .navbar-brand {
@@ -41,13 +39,45 @@ body {
 
 .nav-controls {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.5rem; /* Reduced gap */
     align-items: center;
+}
+
+/* Social Media Icon Colors */
+.social-buttons a,
+.footer-social-buttons a {
+    font-size: 3rem;
+    margin: 0 10px;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Specific Icon Colors */
+.social-buttons .fab.fa-facebook,
+.footer-social-buttons .fab.fa-facebook {
+    color: #1877f2;
+}
+
+.social-buttons .fab.fa-whatsapp,
+.footer-social-buttons .fab.fa-whatsapp {
+    color: #25d366;
+}
+
+.social-buttons .fab.fa-instagram,
+.footer-social-buttons .fab.fa-instagram {
+    color: #e1306c;
+}
+
+/* Hover Effects */
+.social-buttons a:hover,
+.footer-social-buttons a:hover {
+    opacity: 0.8;
 }
 
 /* Hero Section */
 .hero {
-    height: calc(100vh - 80px); /* Adjusted height to account for navbar */
+    height: 100vh;
     background-image: url('luxury-hammam.jpg');
     background-size: cover;
     background-position: center;
@@ -55,7 +85,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1; /* Ensure hero is under the navbar */
 }
 
 .hero-content {
@@ -72,6 +101,65 @@ body {
     font-size: 1.8rem;
     color: var(--text-color);
     margin-top: 20px;
+}
+
+/* Services Section */
+.services {
+    padding: 6rem 10%;
+    background-color: var(--background-color);
+}
+
+.services h2 {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--accent-gold);
+    margin-bottom: 4rem;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.service-card {
+    width: 300px;
+    background-color: var(--background-color);
+    border: 1px solid var(--accent-gold);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.price-tag {
+    margin-top: 10px;
+    background-color: var(--accent-gold);
+    color: var(--background-color);
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-weight: bold;
 }
 
 /* Contact Section */
@@ -107,16 +195,6 @@ body {
     box-shadow: 0 10px 30px var(--shadow-color);
 }
 
-/* General Social Media Button Styles */
-.social-buttons a,
-.footer-social-buttons a {
-    font-size: 3rem;
-    margin: 0 10px;
-    padding: 10px;
-    text-decoration: none;
-    display: inline-block;
-}
-
 /* Footer */
 footer {
     padding: 2rem 10%;
@@ -146,6 +224,15 @@ footer {
         gap: 1rem;
     }
 
+    .service-card {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .services h2 {
+        font-size: 2.5rem;
+    }
+
     .contact-section {
         padding: 3rem 5%;
     }
@@ -161,6 +248,18 @@ footer {
     .map-container iframe {
         height: 300px;
     }
+
+    footer {
+        display: block;
+    }
+
+    .language-selector {
+        margin-top: 20px;
+        position: relative;
+        bottom: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 @media (max-width: 480px) {
@@ -172,7 +271,32 @@ footer {
         font-size: 1rem;
     }
 
-    .navbar-brand {
-        font-size: 1.8rem;
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .language-selector select {
+        width: 100%;
+    }
+
+    .service-card {
+        padding: 1rem;
+    }
+
+    .contact-section {
+        padding: 2rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+    .footer-social-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .footer-social-icon {
+        font-size: 2rem;
     }
 }
