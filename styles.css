@@ -23,12 +23,14 @@ body {
 /* Navigation Bar */
 .navbar {
     height: 80px;
-    padding: 0.5rem 5%;
+    padding: 1rem 5%; /* Increased padding */
     background-color: rgba(255, 255, 255, 0.98);
     box-shadow: 0 2px 15px var(--shadow-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10; /* Added z-index to ensure it's above the hero */
+    position: relative;
 }
 
 .navbar-brand {
@@ -45,7 +47,7 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: calc(100vh - 80px); /* Adjusted height to account for navbar */
     background-image: url('luxury-hammam.jpg');
     background-size: cover;
     background-position: center;
@@ -53,6 +55,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1; /* Ensure hero is under the navbar */
 }
 
 .hero-content {
