@@ -1,21 +1,120 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="قصر عثمان يقدم خدمات الحمام التركي، في عمان، الأردن. استمتع بالاسترخاء التام">
-    <meta name="robots" content="index, follow">
-    <title>حمام قصر عثمان - الحمام التركي الفاخر في مرج الحمام، عمان، الأردن</title>
+  <!-- Charset and Viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Meta Descriptions and Keywords -->
+  <meta name="description" content="حمام قصر عثمان التركي يقدم خدمات الحمام التركي والمغربي في عمان، الأردن. استمتع بجلسات استرخاء مميزة تشمل الجاكوزي، الساونا، والتدليك. | Saray Osman Turkish Bath offers luxury Turkish and Moroccan bath services in Amman, Jordan. Enjoy relaxation with jacuzzi, sauna, and massage.">
+  <meta name="keywords" content="حمام تركي, الحمام المغربي, عمان, الأردن, Saray Osman, Turkish bath, Moroccan bath, Amman, Jordan, relaxation, jacuzzi, sauna, massage">
+  <meta name="robots" content="index, follow">
+
+  <!-- Page Title -->
+  <title>حمام قصر عثمان - أفضل حمام تركي ومغربي في عمان، الأردن | Saray Osman - Best Turkish & Moroccan Bath in Amman, Jordan</title>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://sarayosman.com">
+
+  <!-- Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Cairo&family=Poppins:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Cairo&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta property="og:title" content="حمام قصر عثمان - الحمام التركي الفاخر في مرج الحمام، عمان، الأردن">
-    <meta property="og:description" content="استمتع بالاسترخاء التام مع حمام قصر عثمان تركي. زر سراي عثمان في عمان، الأردن">
-    <meta property="og:image" content="path-to-your-image.jpg">
-    <meta property="og:url" content="https://sarayosman.com">
-    <meta property="og:type" content="website">
+  </noscript>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="حمام قصر عثمان - الحمام التركي الفاخر في عمان، الأردن | Saray Osman - Luxury Turkish Bath in Amman, Jordan">
+  <meta property="og:description" content="أفضل خدمات الحمام التركي والمغربي مع جلسات استرخاء تشمل الجاكوزي، الساونا، التدليك، والأقنعة الطبيعية. | Luxury Turkish and Moroccan bath services including jacuzzi, sauna, massage, and natural treatments.">
+  <meta property="og:image" content="https://sarayosman.com/path-to-your-image.jpg">
+  <meta property="og:url" content="https://sarayosman.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="حمام قصر عثمان - أفضل حمام تركي ومغربي | Saray Osman - Turkish & Moroccan Bath">
+  <meta name="twitter:description" content="جلسات استرخاء مميزة تشمل جاكوزي، ساونا، تدليك، وأقنعة طبيعية. | Relax with luxury Turkish & Moroccan bath services in Amman.">
+  <meta name="twitter:image" content="https://sarayosman.com/path-to-your-image.jpg">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": {
+      "ar": "حمام قصر عثمان التركي",
+      "en": "Saray Osman"
+    },
+    "description": {
+      "ar": "حمام قصر عثمان يقدم خدمات الحمام التركي والمغربي مع جاكوزي، ساونا، تدليك، وأقنعة طبيعية.",
+      "en": "Saray Osman offers Turkish and Moroccan bath services with jacuzzi, sauna, massage, and natural treatments."
+    },
+    "image": "https://sarayosman.com/path-to-your-image.jpg",
+    "url": "https://sarayosman.com",
+    "telephone": "+962793020130",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": {
+        "ar": "شارع الاميرة تغريد",
+        "en": "Prs Taghreed Mohammad St"
+      },
+      "addressLocality": {
+        "ar": "مرج الحمام",
+        "en": "Marj Al-Hamam"
+      },
+      "addressRegion": "Amman",
+      "addressCountry": "Jordan"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "14:00", "closes": "01:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "13:00", "closes": "01:00"}
+    ],
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=100092412745097",
+      "https://wa.me/+962793020130",
+      "https://www.instagram.com/qaser_osman",
+      "https://www.tiktok.com/@qaserosman"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": {
+        "ar": "خدمات الحمام التركي والمغربي",
+        "en": "Turkish & Moroccan Bath Services"
+      },
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": {
+            "ar": "الحمام المغربي",
+            "en": "Moroccan Bath"
+          },
+          "description": {
+            "ar": "جلسة تشمل جاكوزي، ساونا، تدليك، أقنعة مغربية، وزيوت طبيعية.",
+            "en": "A session featuring jacuzzi, sauna, massage, Moroccan masks, and natural oils."
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": {
+            "ar": "الحمام البحر الميت",
+            "en": "Dead Sea Bath"
+          },
+          "description": {
+            "ar": "جلسة تشمل جاكوزي، ساونا، تدليك، أقنعة البحر الميت، وزيوت طبيعية.",
+            "en": "A session featuring jacuzzi, sauna, massage, Dead Sea masks, and natural oils."
+          }
+        }
+      ]
+    }
+  }
+  </script>
 </head>
+
 <body>
 
 <nav class="navbar">
