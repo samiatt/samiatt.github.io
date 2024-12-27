@@ -78,7 +78,6 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background-image: url('hero.jpg');
     background-size: cover;
     background-position: center;
     padding: 0 10%;
