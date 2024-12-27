@@ -10,21 +10,9 @@
 
 
   <!-- Social Media Links (Optional but might not be necessary to include) -->
-  <url>
-    <loc>https://www.facebook.com/profile.php?id=100092412745097</loc>
-    <priority>0.5</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://wa.me/+962793020130</loc>
-    <priority>0.5</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.instagram.com/qaser_osman</loc>
-    <priority>0.5</priority>
-    <changefreq>monthly</changefreq>
-  </url>
+
+
+
   <url>
     <loc>https://www.tiktok.com/@qaserosman</loc>
     <priority>0.5</priority>
