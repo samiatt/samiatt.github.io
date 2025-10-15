@@ -1,538 +1,170 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حمام قصر عثمان | Saray Osman Turkish Hammam</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --dark-blue: #1a365d;
-            --gold: #d4af37;
-            --light-gold: #f8f0d9;
-            --white: #ffffff;
-            --light-gray: #f5f7fa;
-            --text-color: #2d3748;
+  <!-- Charset and Viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Meta Descriptions and Keywords -->
+  <meta name="description" content="حمام قصر عثمان التركي يقدم خدمات الحمام التركي والمغربي في عمان، الأردن. استمتع بجلسات استرخاء مميزة تشمل الجاكوزي، الساونا، والتدليك. | Saray Osman Turkish Bath offers luxury Turkish and Moroccan bath services in Amman, Jordan. Enjoy relaxation with jacuzzi, sauna, and massage.">
+  <meta name="keywords" content="حمام تركي, الحمام المغربي, عمان, الأردن, Saray Osman, Turkish bath, Moroccan bath, Amman, Jordan, relaxation, jacuzzi, sauna, massage">
+  <meta name="robots" content="index, follow">
+
+  <!-- Page Title -->
+  <title>حمام قصر عثمان - أفضل حمام تركي ومغربي في عمان، الأردن | Saray Osman - Best Turkish & Moroccan Bath in Amman, Jordan</title>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://sarayosman.com">
+
+  <!-- Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Cairo&family=Poppins:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Cairo&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  </noscript>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="favicon_64x64.png" type="image/x-icon">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="حمام قصر عثمان - الحمام التركي الفاخر في عمان، الأردن | Saray Osman - Luxury Turkish Bath in Amman, Jordan">
+  <meta property="og:description" content="أفضل خدمات الحمام التركي والمغربي مع جلسات استرخاء تشمل الجاكوزي، الساونا، التدليك، والأقنعة الطبيعية. | Luxury Turkish and Moroccan bath services including jacuzzi, sauna, massage, and natural treatments.">
+  <meta property="og:image" content="https://sarayosman.com/hero.jpg">
+  <meta property="og:url" content="https://sarayosman.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="حمام قصر عثمان - أفضل حمام تركي ومغربي | Saray Osman - Turkish & Moroccan Bath">
+  <meta name="twitter:description" content="جلسات استرخاء مميزة تشمل جاكوزي، ساونا، تدليك، وأقنعة طبيعية. | Relax with luxury Turkish & Moroccan bath services in Amman.">
+  <meta name="twitter:image" content="https://sarayosman.com/hero.jpg">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": {
+      "ar": "حمام قصر عثمان التركي",
+      "en": "Saray Osman"
+    },
+    "description": {
+      "ar": "حمام قصر عثمان يقدم خدمات الحمام التركي والمغربي مع جاكوزي، ساونا، تدليك، وأقنعة طبيعية.",
+      "en": "Saray Osman offers Turkish and Moroccan bath services with jacuzzi, sauna, massage, and natural treatments."
+    },
+    "image": "https://sarayosman.com/hero.jpg",
+    "url": "https://sarayosman.com",
+    "telephone": "+962793020130",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": {
+        "ar": "شارع الاميرة تغريد",
+        "en": "Prs Taghreed Mohammad St"
+      },
+      "addressLocality": {
+        "ar": "مرج الحمام",
+        "en": "Marj Al-Hamam"
+      },
+      "addressRegion": "Amman",
+      "addressCountry": "Jordan"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "14:00", "closes": "01:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "13:00", "closes": "01:00"}
+    ],
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=100092412745097",
+      "https://wa.me/+962793020130",
+      "https://www.instagram.com/qaser_osman",
+      "https://www.tiktok.com/@qaserosman"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": {
+        "ar": "خدمات الحمام التركي والمغربي",
+        "en": "Turkish & Moroccan Bath Services"
+      },
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": {
+            "ar": "الحمام المغربي",
+            "en": "Moroccan Bath"
+          },
+          "description": {
+            "ar": "جلسة تشمل جاكوزي، ساونا، تدليك، أقنعة مغربية، وزيوت طبيعية.",
+            "en": "A session featuring jacuzzi, sauna, massage, Moroccan masks, and natural oils."
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": {
+            "ar": "الحمام البحر الميت",
+            "en": "Dead Sea Bath"
+          },
+          "description": {
+            "ar": "جلسة تشمل جاكوزي، ساونا، تدليك، أقنعة البحر الميت، وزيوت طبيعية.",
+            "en": "A session featuring jacuzzi, sauna, massage, Dead Sea masks, and natural oils."
+          }
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Cairo', sans-serif;
-            color: var(--text-color);
-            background-color: var(--white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4 {
-            color: var(--dark-blue);
-            font-weight: 700;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.zafaf.net/uploads/articles/body/763/apcbLiIpRrpRsNp.jpg') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: var(--white);
-            padding: 0 20px;
-        }
-        
-        .logo {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            color: var(--white);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            color: var(--white);
-            letter-spacing: 2px;
-        }
-        
-        /* Welcome Section */
-        .welcome {
-            padding: 5rem 0;
-            text-align: center;
-            background-color: var(--light-gray);
-        }
-        
-        .welcome-text {
-            font-size: 2rem;
-            color: var(--dark-blue);
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-        
-        /* Services Section */
-        .services {
-            padding: 5rem 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--dark-blue);
-            position: relative;
-        }
-        
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--gold);
-            margin: 10px auto;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .service-card {
-            background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-image {
-            height: 200px;
-            background-position: center;
-            background-size: cover;
-        }
-        
-        .service-content {
-            padding: 1.5rem;
-        }
-        
-        .service-title {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .service-price {
-            color: var(--gold);
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: var(--dark-blue);
-            color: var(--white);
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid var(--dark-blue);
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background: transparent;
-            color: var(--dark-blue);
-        }
-        
-        /* Special Offers */
-        .offers {
-            padding: 5rem 0;
-            background: var(--light-gold);
-            text-align: center;
-        }
-        
-        .offers-text {
-            font-size: 2.2rem;
-            color: var(--dark-blue);
-        }
-        
-        /* Reviews Section */
-        .reviews {
-            padding: 5rem 0;
-            background: var(--light-gray);
-        }
-        
-        .reviews-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .review-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .reviewer {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .reviewer-name {
-            font-weight: 700;
-            margin-left: 1rem;
-        }
-        
-        .stars {
-            color: var(--gold);
-            margin-right: auto;
-        }
-        
-        .review-text {
-            font-style: italic;
-            line-height: 1.8;
-        }
-        
-        /* Contact Section */
-        .contact {
-            padding: 5rem 0;
-        }
-        
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .social-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background: var(--dark-blue);
-            color: var(--white);
-            border-radius: 50%;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        
-        .social-icon:hover {
-            transform: translateY(-5px);
-            background: var(--gold);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--dark-blue);
-            color: var(--white);
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        .footer-text {
-            font-size: 0.9rem;
-        }
-        
-        /* WhatsApp Notification */
-        .whatsapp-notification {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background: #25D366;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 50px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            display: none;
-            align-items: center;
-            gap: 10px;
-            z-index: 1000;
-        }
-        
-        .whatsapp-notification i {
-            font-size: 1.2rem;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 2.5rem;
-            }
-            
-            .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .welcome-text {
-                font-size: 1.5rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .social-icons {
-                flex-wrap: wrap;
-            }
-            
-            .whatsapp-notification {
-                bottom: 10px;
-                left: 10px;
-                right: 10px;
-                text-align: center;
-            }
-        }
-    </style>
+      ]
+    }
+  }
+  </script>
 </head>
+
 <body>
-    <!-- WhatsApp Notification -->
-    <div class="whatsapp-notification" id="whatsappNotification">
-        <i class="fab fa-whatsapp"></i>
-        <span>يتم فتح محادثة واتساب...</span>
+
+<nav class="navbar">
+    <div class="navbar-brand" id="brand-name">حمام قصر عثمان</div>
+    <div class="nav-controls">
+        <div class="social-buttons">
+            <a href="https://www.facebook.com/profile.php?id=100092412745097" target="_blank" class="social-icon">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://wa.me/+962793020130" target="_blank" class="social-icon">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/qaser_osman" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
     </div>
+</nav>
 
-    <!-- Header/Hero Section -->
-    <header class="hero">
-        <h1 class="logo">حمام قصر عثمان</h1>
-        <p class="subtitle">saray osman</p>
-    </header>
+<section class="hero">
+    <div class="hero-content">
+        <h1 id="hero-title">مرحبًا بكم في حمام قصر عثمان</h1>
+        <p id="hero-description">استمتع بالاسترخاء التام في بيئتنا الفاخرة. موقعنا الإلكتروني قيد التطوير، لكننا هنا لخدمتك! تواصل معنا عبر وسائل التواصل الاجتماعي أو اتصل بنا للمزيد من التفاصيل.</p>
+    </div>
+</section>
 
-    <!-- Welcome Section -->
-    <section class="welcome">
-        <div class="container">
-            <p class="welcome-text">مرحباً بك في حمام قصر عثمان التركي حيث الخدمة من الدرجة الاولى</p>
+<section class="contact-section">
+    <div class="contact-info">
+        <h5 id="contact-title">اتصل بنا</h5>
+        <p id="contact-description">زورونا في: شارع الاميرة تغريد ,مرج الحمام، الأردن</p>
+        <p id="contact-phone">اتصل بنا: 0793020130</p>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.6953427034587!2d35.849902276296625!3d31.887699674048164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca7ab276a44ed%3A0x73c60928f6dfa31a!2z2K3Zhdin2YUg2YLYtdixINi52KvZhdin2YYg2KfZhNiq2LHZg9mK!5e0!3m2!1sen!2sro!4v1734234016775!5m2!1sen!2sro" frameborder="0"></iframe>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">خدماتنا</h2>
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card">
-                    <div class="service-image" style="background-image: url('https://www.zafaf.net/uploads/articles/body/763/apcbLiIpRrpRsNp.jpg');"></div>
-                    <div class="service-content">
-                        <h3 class="service-title">حمام تركي</h3>
-                        <p class="service-price">15 دينار</p>
-                        <button class="btn" onclick="openWhatsApp('الحمام التركي')">احجز الآن</button>
-                    </div>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card">
-                    <div class="service-image" style="background-image: url('https://cdn.salla.sa/nEQnQb/4288ae39-1a96-491e-9791-dd22e83cce7b-1000x664-mnzHTUYGBHo9I9G1pCKvTrdnkNGb5MCqabzcLDcQ.jpg');"></div>
-                    <div class="service-content">
-                        <h3 class="service-title">حمام الورد</h3>
-                        <p class="service-price">20 دينار</p>
-                        <button class="btn" onclick="openWhatsApp('حمام الورد')">احجز الآن</button>
-                    </div>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-card">
-                    <div class="service-image" style="background-image: url('https://assafirarabi.com/wp-content/uploads/2021/05/%D8%B9%D8%AF%D8%A9-%D8%A7%D9%84%D8%AD%D9%85%D8%A7%D9%85.jpg');"></div>
-                    <div class="service-content">
-                        <h3 class="service-title">الحمام المغربي</h3>
-                        <p class="service-price">25 دينار</p>
-                        <button class="btn" onclick="openWhatsApp('الحمام المغربي')">احجز الآن</button>
-                    </div>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="service-card">
-                    <div class="service-image" style="background-image: url('https://blog.dermazonestore.com/wp-content/uploads/2024/01/herbal-compress-herbal-spa-treatment-equipments-put-dark-floor-768x512.jpg');"></div>
-                    <div class="service-content">
-                        <h3 class="service-title">حمام البحر الميت</h3>
-                        <p class="service-price">30 دينار</p>
-                        <button class="btn" onclick="openWhatsApp('حمام البحر الميت')">احجز الآن</button>
-                    </div>
-                </div>
-                
-                <!-- Service 5 -->
-                <div class="service-card">
-                    <div class="service-image" style="background-image: url('https://media.zid.store/thumbs/2a7dec10-dae3-4773-9ea3-f881d840626a/c1f9482c-8a2c-40b0-b599-c6b674648923-thumbnail-770x770.png');"></div>
-                    <div class="service-content">
-                        <h3 class="service-title">حمام العود والعنبر</h3>
-                        <p class="service-price">35 دينار</p>
-                        <button class="btn" onclick="openWhatsApp('حمام العود والعنبر')">احجز الآن</button>
-                    </div>
-                </div>
-                
-                <!-- Service 6 -->
-                <div class="service-card">
-                    <div class="service-image" style="background-image: url('https://jamalouki.net/uploads/imported_images/uploads/richTextEditor/default_richTextEditor/d58/03febc195a2c8cc040c3332eed92bd43.webp');"></div>
-                    <div class="service-content">
-                        <h3 class="service-title">جلسة مساج</h3>
-                        <p class="service-price">35 دينار</p>
-                        <button class="btn" onclick="openWhatsApp('جلسة مساج')">احجز الآن</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Special Offers Section -->
-    <section class="offers">
-        <div class="container">
-            <h2 class="offers-text">🎉 عروض خاصة للمجموعات</h2>
-        </div>
-    </section>
-
-    <!-- Customer Reviews Section -->
-    <section class="reviews">
-        <div class="container">
-            <h2 class="section-title">آراء عملائنا</h2>
-            <div class="reviews-container">
-                <!-- Review 1 -->
-                <div class="review-card">
-                    <div class="reviewer">
-                        <h3 class="reviewer-name">عمر عبد اللطيف</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="review-text">"الحمام جداً فاخر و التجربة جداً مميزة"</p>
-                </div>
-                
-                <!-- Review 2 -->
-                <div class="review-card">
-                    <div class="reviewer">
-                        <h3 class="reviewer-name">محمود</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                    </div>
-                    <p class="review-text">"الخدمة مثالية و الموظفين جداً لطيفين شكراً الكم"</p>
-                </div>
-                
-                <!-- Review 3 -->
-                <div class="review-card">
-                    <div class="reviewer">
-                        <h3 class="reviewer-name">سليم المنسي</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="review-text">"بنصحكم تجربو حمام العود و العنبر يا الله ما اجمله 🙏🏻"</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact & Social Section -->
-    <section class="contact">
-        <div class="container">
-            <h2 class="section-title">تواصل معنا</h2>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/share/1EPSXznRKw/" class="social-icon">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/qaser_osman?igsh=M29uM3NjcTRmcnow" class="social-icon">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://wa.me/962793020130" class="social-icon">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="tel:0793020130" class="social-icon">
-                    <i class="fas fa-phone"></i>
-                </a>
-                <a href="https://maps.app.goo.gl/WmrjHhzZfW9eP6f36" class="social-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p class="footer-text">All Rights Reserved to حمام قصر عثمان, Website Designed by Basheer Abu Omar</p>
-        </div>
-    </footer>
-
-    <script>
-        // Function to open WhatsApp with pre-filled message
-        function openWhatsApp(serviceName) {
-            // Show notification
-            const notification = document.getElementById('whatsappNotification');
-            notification.style.display = 'flex';
-            
-            // Create the WhatsApp message
-            const message = `انا مهتم ب${serviceName} من فضلك احجز لي الآن.`;
-            
-            // Encode the message for URL
-            const encodedMessage = encodeURIComponent(message);
-            
-            // Create the WhatsApp URL
-            const whatsappURL = `https://wa.me/962793020130?text=${encodedMessage}`;
-            
-            // Open WhatsApp after a short delay to show the notification
-            setTimeout(() => {
-                window.open(whatsappURL, '_blank');
-                
-                // Hide notification after 3 seconds
-                setTimeout(() => {
-                    notification.style.display = 'none';
-                }, 3000);
-            }, 1000);
-        }
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+<footer>
+    <p id="footer-text">&copy; 2024 قصر عثمان. جميع الحقوق محفوظة</p>
+    <div class="footer-social-buttons">
+        <a href="https://www.facebook.com/profile.php?id=100092412745097" target="_blank" class="footer-social-icon">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://wa.me/+962793020130" target="_blank" class="footer-social-icon">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/qaser_osman" target="_blank" class="footer-social-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</footer>
 </body>
 </html>
